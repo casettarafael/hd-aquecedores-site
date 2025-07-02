@@ -120,7 +120,9 @@ a:hover {
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    flex-direction: row; /* FORÇA HORIZONTAL EM TODAS AS TELAS */
+    justify-content: center; /* Centraliza os links no mobile */
+    gap: 30px; /* Espaço entre os itens da navegação */
     padding: 0;
     margin: 0;
 }
@@ -164,8 +166,8 @@ a:hover {
     min-height: 600px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Centraliza itens horizontalmente no flex-column */
+    justify-content: center; /* Centraliza itens verticalmente no flex-column */
 }
 
 .hero-banner h2 {
@@ -174,10 +176,12 @@ a:hover {
     font-weight: 800;
     color: var(--dark-blue-gray);
     text-shadow: none;
-    text-align: center;
-    width: 100%; /* Garante que o h2 ocupe a largura total para centralização */
-    padding: 0 20px;
-    box-sizing: border-box;
+    text-align: center; /* Centraliza o texto dentro do h2 */
+    width: 100%; /* Garante que o h2 ocupe a largura total disponível */
+    padding: 0 20px; /* Adiciona um padding horizontal para não colar nas bordas */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura além do 100% */
+    margin-left: auto; /* Força centralização do bloco */
+    margin-right: auto; /* Força centralização do bloco */
 }
 
 /* Estilo para o texto de destaque no Hero */
@@ -422,7 +426,7 @@ section p {
     align-items: center;
 }
 
-.brand-logos img { /* Estilo do logo dentro do slide */
+.brand-logos img {
     max-width: 150px;
     height: auto;
     filter: grayscale(100%);
@@ -527,6 +531,34 @@ section p {
     font-size: 0.95rem;
 }
 
+/* Botão Flutuante do WhatsApp */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+}
+
+.floating-whatsapp a {
+    background-color: var(--secondary-green);
+    color: var(--white-bg);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: all var(--transition-speed);
+}
+
+.floating-whatsapp a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+
 /* RESPONSIVIDADE (MEDIA QUERIES) */
 @media (max-width: 1200px) {
     .container {
@@ -606,12 +638,17 @@ section p {
         max-height: 60px;
     }
     .main-nav ul {
-        flex-direction: column;
-        gap: 8px;
+        flex-direction: row; /* Alterado para horizontal em mobile */
+        justify-content: space-around; /* Distribui o espaço */
+        gap: 5px; /* Reduz o gap para caber tudo */
         margin-top: 10px;
     }
     .main-nav ul li a {
-        font-size: 0.85rem;
+        font-size: 0.8rem; /* Fonte menor para caber */
+        padding: 5px; /* Padding menor */
+    }
+    .main-nav ul li a::after { /* Underline animado (ajusta posição) */
+        bottom: -2px;
     }
     .hero-banner {
         padding: 50px 10px;
@@ -651,5 +688,14 @@ section p {
     }
     .aboutSwiper .swiper-slide img {
         height: 160px;
+    }
+    .floating-whatsapp {
+        bottom: 15px;
+        right: 15px;
+    }
+    .floating-whatsapp a {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
     }
 }
