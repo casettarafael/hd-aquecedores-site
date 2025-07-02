@@ -1,51 +1,75 @@
-/* Importa fontes do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap');
+/* Importa fontes do Google Fonts - Poppins para corpo, Montserrat para títulos */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
-/* Variáveis CSS para cores - facilite a mudança futura! */
+/* Variáveis CSS para Cores e Propriedades Globais */
 :root {
-    --primary-red: #E44D26; /* Cor principal, como o destaque do Google */
-    --secondary-green: #25D366; /* Verde do WhatsApp */
-    --dark-bg: #222831; /* Fundo escuro */
-    --light-bg: #EEEEEE; /* Fundo claro */
-    --text-dark: #333333;
-    --text-light: #F9F9F9;
-    --card-bg: #FFFFFF;
-    --shadow-color: rgba(0, 0, 0, 0.15);
+    --primary-red: #E44D26; /* Vermelho principal para destaque */
+    --secondary-green: #25D366; /* Verde do WhatsApp/Botões */
+    --accent-blue: #3498DB; /* Um azul para acento, inspirado no logo */
+    --dark-blue-gray: #2C3E50; /* Cor escura para cabeçalhos e textos principais */
+    --text-body: #6C757D; /* Cor para o texto do corpo, um cinza suave */
+    --light-bg: #F8F9FA; /* Fundo muito claro para seções */
+    --white-bg: #FFFFFF; /* Fundo branco puro para elementos principais */
+    --border-light: #E9ECEF; /* Borda sutil */
+    --shadow-subtle: rgba(0, 0, 0, 0.05); /* Sombra muito leve */
+    --shadow-medium: rgba(0, 0, 0, 0.12); /* Sombra padrão para cards */
+    --shadow-strong: rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+
+    /* Espaçamentos e Tamanhos Padrão */
+    --section-padding-desktop: 100px;
+    --section-padding-mobile: 60px;
+    --border-radius-base: 8px;
+    --transition-speed: 0.3s ease;
 }
 
-/* Estilos Globais */
-body {
-    font-family: 'Poppins', sans-serif;
+/* Reset Básico e Estilos Globais */
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    line-height: 1.6;
-    color: var(--text-dark);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7; /* Maior espaçamento entre linhas para leitura */
+    color: var(--text-body);
     background-color: var(--light-bg);
-    overflow-x: hidden; /* Evita barras de rolagem horizontais em animações */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--dark-blue-gray);
+    line-height: 1.2;
 }
 
 a {
     text-decoration: none;
     color: var(--primary-red);
+    transition: all var(--transition-speed);
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #FF6347;
+    text-decoration: none;
 }
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 30px 0; /* Mais padding para espaçamento */
+    padding: 0;
 }
 
-/* Animação de Fade-In para Seções */
-@keyframes fadeInBottom {
+/* Animações de Entrada */
+@keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -53,23 +77,18 @@ a:hover {
     }
 }
 
-.fade-in {
-    opacity: 0; /* Esconde inicialmente */
-    animation: fadeInBottom 1s ease-out forwards; /* Aplica a animação */
+.animate-on-scroll {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
 }
-
-/* Atraso para animação de várias seções - ajuste conforme a ordem das suas seções */
-.fade-in:nth-of-type(2) { animation-delay: 0.2s; } /* Serviços */
-.fade-in:nth-of-type(3) { animation-delay: 0.4s; } /* Marcas */
-.fade-in:nth-of-type(4) { animation-delay: 0.6s; } /* Sobre Nós */
-.fade-in:nth-of-type(5) { animation-delay: 0.8s; } /* Contato */
-
 
 /* CABEÇALHO / NAVEGAÇÃO */
 .main-header {
-    background: white; /* AGORA É BRANCO! */
-    padding: 4rem 0; /* AUMENTADO MAIS AINDA O PADDING PARA MAIOR ALTURA DA FAIXA */
-    box-shadow: 0 2px 10px var(--shadow-color);
+    background: var(--white-bg);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 15px var(--shadow-subtle);
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
@@ -77,60 +96,54 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0; /* Remove padding extra do container aqui */
+    padding: 0;
 }
 
-/* Estilos para o Logo no Cabeçalho */
 .main-header .logo {
-    margin: 0; /* Remove a margem padrão do h1 */
+    margin: 0;
 }
 
 .main-header .logo-link {
-    display: block; /* Garante que o link ocupe o espaço para alinhar a imagem */
+    display: block;
 }
 
 .main-header .header-logo-img {
-    max-height: 180px; /* LOGO MAIOR AQUI! */
-    width: auto; /* Mantém a proporção da imagem */
-    transition: transform 0.3s ease; /* Mantemos a transição para outros efeitos */
+    max-height: 100px;
+    width: auto;
+    transition: transform var(--transition-speed);
 }
 
 .main-header .logo-link:hover .header-logo-img {
-    transform: scale(1.05); /* Um pequeno zoom no hover */
-    box-shadow: 0 0 10px rgba(228, 77, 38, 0.5); /* Sombra com a cor primária */
+    transform: scale(1.03);
 }
 
 .main-nav ul {
     list-style: none;
+    display: flex;
+    gap: 30px;
     padding: 0;
     margin: 0;
 }
 
-.main-nav ul li {
-    display: inline-block; /* Use inline-block para mais controle */
-    margin-left: 40px; /* AUMENTADO O ESPAÇAMENTO ENTRE OS LINKS */
-}
-
 .main-nav ul li a {
-    color: var(--dark-bg); /* MUDADO PARA ESCURO NO FUNDO BRANCO */
-    text-decoration: none;
+    color: var(--dark-blue-gray);
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1rem;
     position: relative;
-    padding-bottom: 5px; /* Espaço para o underline animado */
-    transition: color 0.3s ease;
+    padding: 5px 0;
+    transition: all var(--transition-speed);
 }
 
-/* Animação de underline para navegação */
 .main-nav ul li a::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 3px;
+    height: 2px;
     background-color: var(--primary-red);
-    left: 0;
-    bottom: 0;
-    transition: width 0.3s ease;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    transition: width var(--transition-speed);
 }
 
 .main-nav ul li a:hover::after {
@@ -143,308 +156,500 @@ a:hover {
 
 /* SEÇÃO PRINCIPAL / BANNER HERO */
 .hero-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1500x700/333/eee?text=Sua+imagem+de+fundo+aqui') no-repeat center center/cover;
-    color: var(--text-light);
+    background: var(--white-bg) url('https://via.placeholder.com/1920x800/F0F2F5/A0A0A0?text=Sua+imagem+de+fundo+aqui') no-repeat center center/cover;
+    background-blend-mode: multiply;
+    color: var(--dark-blue-gray);
     text-align: center;
-    padding: 120px 0; /* Mais padding para destaque */
-    min-height: 500px;
+    padding: var(--section-padding-desktop) 20px;
+    min-height: 600px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .hero-banner h2 {
-    font-size: clamp(2.2rem, 5vw, 3.5rem); /* Tamanho de fonte responsivo */
-    margin-bottom: 25px;
-    line-height: 1.2;
-    font-weight: 700;
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    margin-bottom: 30px;
+    font-weight: 800;
+    color: var(--dark-blue-gray);
+    text-shadow: none;
+    text-align: center;
+    width: 100%; /* Garante que o h2 ocupe a largura total para centralização */
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-.hero-banner .highlight-text {
-    font-size: clamp(1rem, 2.5vw, 1.4rem);
+/* Estilo para o texto de destaque no Hero */
+.hero-highlight-text {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
     background-color: var(--secondary-green);
-    padding: 12px 25px;
-    border-radius: 8px;
+    color: var(--white-bg);
+    padding: 10px 20px;
+    border-radius: var(--border-radius-base);
     display: inline-block;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-weight: 600;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.btn-whatsapp, .btn-call {
-    display: inline-block;
-    padding: 16px 35px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    margin: 15px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: var(--text-light);
-    border: none;
-    cursor: pointer;
-}
-
-.btn-whatsapp {
-    background: var(--secondary-green);
-}
-
-.btn-whatsapp:hover {
-    background: #1eaf53; /* Tom mais escuro do verde */
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.btn-call {
-    background: var(--primary-red);
-}
-
-.btn-call:hover {
-    background: #c23b1a; /* Tom mais escuro do vermelho */
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.btn-whatsapp i {
-    margin-right: 10px;
-    font-size: 1.4rem;
-    vertical-align: middle;
-}
-
-/* Seções Gerais de Conteúdo */
-section {
-    padding: 80px 0; /* Mais padding para seções */
+    box-shadow: 0 3px 10px var(--shadow-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
     text-align: center;
 }
-
-section:nth-of-type(odd) { /* Altera o fundo de seções ímpares */
-    background-color: var(--light-bg);
+.hero-highlight-text strong {
+    font-weight: 700;
+    font-size: 1.1em;
 }
 
-section:nth-of-type(even) { /* Altera o fundo de seções pares */
-    background-color: #f9f9f9;
+/* Grupo de botões no Hero */
+.hero-buttons-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
+.btn-primary-whatsapp, .btn-primary-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: var(--border-radius-base);
+    font-weight: 600;
+    transition: all var(--transition-speed);
+    box-shadow: 0 3px 10px var(--shadow-medium);
+    border: 2px solid transparent;
+    color: var(--white-bg);
+    font-size: 1.1rem;
+    min-width: 220px;
+}
+
+.btn-primary-whatsapp {
+    background: var(--secondary-green);
+    border-color: var(--secondary-green);
+}
+
+.btn-primary-whatsapp i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+.btn-primary-whatsapp:hover {
+    background: #1eaf53;
+    border-color: #1eaf53;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px var(--shadow-strong);
+}
+
+.btn-primary-call {
+    background: var(--white-bg);
+    color: var(--primary-red);
+    border-color: var(--primary-red);
+}
+.btn-primary-call i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+.btn-primary-call:hover {
+    background: var(--primary-red);
+    color: var(--white-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px var(--shadow-strong);
+}
+
+
+/* SEÇÕES DE CONTEÚDO GERAL */
+section {
+    padding: var(--section-padding-desktop) 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+section:nth-of-type(odd) {
+    background-color: var(--white-bg);
+}
+
+section:nth-of-type(even) {
+    background-color: var(--light-gray);
+}
 
 section h3, section h2 {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    color: var(--primary-red);
-    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    color: var(--dark-blue-gray);
+    margin-bottom: 40px;
     font-weight: 700;
     text-transform: uppercase;
+    position: relative;
 }
+
+section h3::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-red);
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
 section p {
     font-size: 1.05rem;
-    max-width: 800px;
-    margin: 0 auto 15px auto;
+    max-width: 850px;
+    margin: 0 auto 20px auto;
+    color: var(--text-body);
 }
 
-/* Seção de Serviços */
+/* Seção de Serviços - CARROSSEL SWIPER COM NOVO ESTILO */
 .services-section h3 {
-    color: var(--dark-bg); /* Cor de destaque para título de serviço */
+    color: var(--primary-red);
 }
 
-.service-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px; /* Mais espaçamento entre cards */
-    margin-top: 40px;
+/* Ajustes para o contêiner Swiper */
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-.service-cards .card {
-    background: var(--card-bg);
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px var(--shadow-color);
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #eee;
+/* Estilo dos slides (cards) dentro do Swiper */
+.swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
 }
 
-.service-cards .card:hover {
+.swiper-slide .card {
+    background: var(--white-bg);
+    padding: 40px;
+    border-radius: var(--border-radius-base);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    text-align: center;
+    transition: all var(--transition-speed);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.swiper-slide .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 40px var(--shadow-strong);
 }
 
-.service-cards .card h4 {
-    color: var(--dark-bg);
+.swiper-slide .card h4 {
+    color: var(--dark-blue-gray);
     font-size: 1.6rem;
     margin-bottom: 15px;
     font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
 }
 
-.service-cards .card p {
+.swiper-slide .card h4::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent-blue);
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.swiper-slide .card p {
     font-size: 1rem;
-    color: #555;
+    color: var(--text-body);
+}
+
+/* Estilos das setas de navegação do Swiper (comum para todos os Swipers) */
+.swiper-button-next, .swiper-button-prev {
+    color: var(--dark-blue-gray);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 10px var(--shadow-subtle);
+    transition: all var(--transition-speed);
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background: var(--primary-red);
+    color: var(--white-bg);
+    box-shadow: 0 4px 15px var(--shadow-medium);
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 1.2rem;
+}
+
+/* Estilos da paginação (bolinhas) do Swiper (comum para todos os Swipers) */
+.swiper-pagination-bullet {
+    background: var(--dark-blue-gray);
+    opacity: 0.5;
+    transition: opacity var(--transition-speed);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-red);
+    opacity: 1;
 }
 
 
 /* Seção Marcas Atendidas */
 .brands-section h3 {
-    color: var(--dark-bg);
+    color: var(--dark-blue-gray);
 }
 
-.brand-logos {
+/* Ajustes para o contêiner Swiper de Marcas */
+.myBrandsSwiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.myBrandsSwiper .swiper-slide {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* Mais espaçamento entre logos */
-    margin-top: 50px;
 }
 
-.brand-logos img {
-    max-width: 160px; /* Tamanho ligeiramente maior para logos */
+.brand-logos img { /* Estilo do logo dentro do slide */
+    max-width: 150px;
     height: auto;
     filter: grayscale(100%);
-    opacity: 0.6;
-    transition: all 0.4s ease-in-out;
+    opacity: 0.5;
+    transition: all 0.5s ease-in-out;
 }
 
 .brand-logos img:hover {
     filter: grayscale(0%);
     opacity: 1;
-    transform: scale(1.05); /* Pequeno zoom no hover */
+    transform: scale(1.1);
 }
 
 /* Seção Sobre Nós / Especialidade */
 .about-specialty-section p {
-    color: var(--text-dark);
+    color: var(--text-body);
+    max-width: 900px;
 }
 
-/* Seção Sobre Nós - Imagens */
-.about-images {
-    display: flex;
-    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha em telas menores */
-    justify-content: center;
-    gap: 25px; /* Espaço entre as imagens */
-    margin-top: 50px; /* Espaço acima das imagens */
+/* Estilos específicos para o Swiper de "Sobre Nós" (setas em fundo claro) */
+.aboutSwiper .swiper-button-next,
+.aboutSwiper .swiper-button-prev {
+    color: var(--dark-blue-gray);
+    border: 2px solid var(--dark-blue-gray);
+    background: rgba(255, 255, 255, 0.8);
 }
 
-.about-images img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
-    width: 300px; /* Largura base para cada imagem */
-    height: 200px; /* Altura fixa para cortar as imagens de forma uniforme */
-    object-fit: cover; /* Faz com que a imagem cubra o espaço sem distorcer */
-    border-radius: 10px; /* Cantos arredondados */
-    box-shadow: 0 8px 20px var(--shadow-color); /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.aboutSwiper .swiper-button-next:hover,
+.aboutSwiper .swiper-button-prev:hover {
+    background: var(--primary-red);
+    color: var(--white-bg);
+    border-color: var(--primary-red);
 }
 
-.about-images img:hover {
-    transform: translateY(-5px) scale(1.02); /* Leve levantamento e zoom no hover */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* Sombra mais intensa no hover */
+.aboutSwiper .swiper-button-next::after,
+.aboutSwiper .swiper-button-prev::after {
+    font-size: 1.2rem;
 }
 
-/* Seção de Contato */
+.aboutSwiper .swiper-pagination-bullet {
+    background: var(--dark-blue-gray);
+    opacity: 0.5;
+}
+
+.aboutSwiper .swiper-pagination-bullet-active {
+    background: var(--primary-red);
+    opacity: 1;
+}
+
+/* Estilo dos slides de imagem (já ajustado para o card) */
+.aboutSwiper .swiper-slide img {
+    max-width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: var(--border-radius-base);
+    box-shadow: 0 10px 30px var(--shadow-medium);
+    transition: all var(--transition-speed);
+    border: 1px solid var(--border-light);
+}
+.aboutSwiper .swiper-slide img:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 18px 45px var(--shadow-strong);
+}
+
+
+/* Seção de Contato - Nova cor de fundo */
 .contact-section {
-    background-color: var(--dark-bg);
+    background-color: var(--dark-blue-gray);
     color: var(--text-light);
+    padding: var(--section-padding-desktop) 0;
 }
 
 .contact-section h3 {
-    color: var(--primary-red);
+    color: var(--white-bg);
+}
+
+.contact-section h3::after {
+    background-color: var(--primary-red);
 }
 
 .contact-section p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 1.15rem;
+    margin-bottom: 15px;
     color: var(--text-light);
 }
 
 .contact-section a {
     color: var(--primary-red);
-    text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 600;
 }
 
 .contact-section a:hover {
-    color: #FF7F50; /* Um tom de laranja/vermelho mais claro no hover */
-    text-decoration: underline;
+    color: #FF6347;
 }
 
 /* Rodapé */
 .main-footer {
-    background: #111111;
-    color: #AAAAAA;
+    background: #1C2833;
+    color: #99AAB5;
     text-align: center;
-    padding: 25px 0;
-    font-size: 0.9rem;
+    padding: 30px 0;
+    font-size: 0.95rem;
 }
 
 /* RESPONSIVIDADE (MEDIA QUERIES) */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 992px) { /* Tablets grandes e desktops menores */
     .main-header .container {
         flex-direction: column;
+        gap: 15px;
     }
-    .main-header { /* Ajusta o padding para tela mobile */
-        padding: 3rem 0; /* Aumentado um pouco mais para o mobile também */
-    }
-    .main-nav ul li {
-        margin: 0 8px; /* Mantém espaçamento horizontal em mobile se não empilhar */
-    }
-    .main-header .logo {
-        margin-bottom: 15px;
-    }
-
-    /* Ajustes para o logo em telas menores */
     .main-header .header-logo-img {
-        max-height: 120px; /* LOGO MAIOR NO MOBILE TAMBÉM (ajustado para 120px) */
+        max-height: 80px;
     }
-
+    .main-nav ul {
+        gap: 15px;
+    }
+    .main-nav ul li a {
+        font-size: 0.95rem;
+    }
     .hero-banner {
-        padding: 80px 0;
+        padding: var(--section-padding-mobile) 15px;
+        min-height: 480px;
     }
-
-    .btn-whatsapp, .btn-call {
-        width: 90%;
-        max-width: 350px;
-        display: block;
-        margin: 15px auto;
-        font-size: 1.1rem;
+    .hero-banner h2 {
+        font-size: clamp(2.2rem, 5vw, 3.5rem);
+        margin-bottom: 25px;
+    }
+    .hero-highlight-text {
+        font-size: clamp(0.9rem, 2.2vw, 1.2rem);
+        padding: 8px 15px;
+        margin-bottom: 20px;
+    }
+    .hero-highlight-text strong {
+        font-size: 1.05em;
+    }
+    .hero-buttons-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn-primary-whatsapp, .btn-primary-call {
+        min-width: 85%;
+        font-size: 1rem;
         padding: 12px 25px;
     }
-
-    .service-cards {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    .btn-primary-whatsapp i, .btn-primary-call i {
+        font-size: 1.5rem;
     }
-
-    .brand-logos img {
-    max-width: 120px;
-    margin: 15px;
+    section {
+        padding: var(--section-padding-mobile) 0;
+    }
+    section h3, section h2 {
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+    }
+    .service-cards .card {
+        padding: 30px;
+    }
+    .brands-section img {
+        max-width: 80px;
+    }
+    .about-images {
+        display: block;
+        margin-top: 40px;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .aboutSwiper .swiper-slide img {
+        width: 100%;
+        height: 200px;
+    }
 }
 
-section {
-    padding: 60px 0;
-}
-
-/* Responsividade para as imagens da seção Sobre Nós */
-.about-images {
-    gap: 20px;
-}
-.about-images img {
-    width: 100%; /* Em telas menores, cada imagem ocupa a largura total */
-    height: 220px; /* Ajuste a altura se necessário */
-}
-}
-
-@media (max-width: 480px) {
-    .hero-banner h2 {
-        font-size: 1.8rem;
+@media (max-width: 767px) {
+    .main-header .header-logo-img {
+        max-height: 60px;
     }
     .main-nav ul {
         flex-direction: column;
-        align-items: center;
+        gap: 8px;
+        margin-top: 10px;
     }
-    .main-nav ul li {
-        margin: 8px 0; /* Espaçamento vertical para links empilhados */
+    .main-nav ul li a {
+        font-size: 0.85rem;
+    }
+    .hero-banner {
+        padding: 50px 10px;
+        min-height: 400px;
+    }
+    .hero-banner h2 {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
+    }
+    .hero-highlight-text {
+        font-size: clamp(0.85rem, 2.5vw, 1rem);
+        padding: 8px 12px;
+        margin-bottom: 15px;
+    }
+    .hero-highlight-text strong {
+        font-size: 1.0em;
+    }
+    .hero-buttons-group {
+        gap: 10px;
+    }
+    .btn-primary-whatsapp, .btn-primary-call {
+        font-size: 0.9rem;
+        padding: 10px 18px;
+        min-width: unset;
+        width: 95%;
+    }
+    .btn-primary-whatsapp i, .btn-primary-call i {
+        font-size: 1.3rem;
+    }
+    section {
+        padding: 40px 10px;
     }
     .service-cards .card {
-        padding: 25px;
+        padding: 20px;
     }
-    .about-images img {
-        height: 180px; /* Altura ainda menor para celulares */
+    .contact-section p {
+        font-size: 0.9rem;
+    }
+    .aboutSwiper .swiper-slide img {
+        height: 160px;
     }
 }
