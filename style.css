@@ -68,7 +68,7 @@ a:hover {
 /* CABEÇALHO / NAVEGAÇÃO */
 .main-header {
     background: white; /* AGORA É BRANCO! */
-    padding: 1rem 0;
+    padding: 2rem 0; /* AUMENTADO O PADDING PARA MAIOR ALTURA DA FAIXA */
     box-shadow: 0 2px 10px var(--shadow-color);
     position: sticky; /* Fixa o cabeçalho no topo ao rolar */
     top: 0;
@@ -92,7 +92,7 @@ a:hover {
 }
 
 .main-header .header-logo-img {
-    max-height: 120px; /* ALTURA AUMENTADA AQUI! */
+    max-height: 150px; /* LOGO AINDA MAIOR AQUI! */
     width: auto; /* Mantém a proporção da imagem */
     transition: transform 0.3s ease; /* Mantemos a transição para outros efeitos */
 }
@@ -110,7 +110,7 @@ a:hover {
 
 .main-nav ul li {
     display: inline-block; /* Use inline-block para mais controle */
-    margin-left: 25px;
+    margin-left: 40px; /* AUMENTADO O ESPAÇAMENTO ENTRE OS LINKS */
 }
 
 .main-nav ul li a {
@@ -438,7 +438,7 @@ section {
         align-items: center;
     }
     .main-nav ul li {
-        margin: 8px 0;
+        margin: 8px 0; /* Espaçamento vertical para links empilhados */
     }
     .service-cards .card {
         padding: 25px;
