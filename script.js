@@ -30,7 +30,7 @@ var aboutSwiper = new Swiper(".aboutSwiper", {
     spaceBetween: 30,
     loop: true,
     centeredSlides: true,
-    autoplay: { // NOVO: Configuração para autoplay
+    autoplay: { // Configuração para autoplay
         delay: 3000, // Tempo em milissegundos (3000ms = 3 segundos)
         disableOnInteraction: false, // Continua o autoplay mesmo se o usuário interagir
     },
@@ -62,18 +62,18 @@ var aboutSwiper = new Swiper(".aboutSwiper", {
 
 // Inicializa o Swiper para a seção de Marcas (já com autoplay)
 var brandsSwiper = new Swiper(".myBrandsSwiper", {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
+    slidesPerView: 2, // Começa mostrando 2 logos em telas pequenas
+    spaceBetween: 20, // Espaço entre os logos
+    loop: true, // Carrossel infinito para marcas
+    autoplay: { // Autoplay opcional para marcas
+        delay: 2500, // Passa a cada 2.5 segundos
+        disableOnInteraction: false, // Continua autoplay mesmo se o usuário interagir
     },
-    navigation: {
+    navigation: { // Setas para navegação
         nextEl: ".myBrandsSwiper .swiper-button-next",
         prevEl: ".myBrandsSwiper .swiper-button-prev",
     },
-    pagination: {
+    pagination: { // Paginação (bolinhas)
         el: ".myBrandsSwiper .swiper-pagination",
         clickable: true,
     },

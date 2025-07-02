@@ -60,9 +60,9 @@ a:hover {
 
 .container {
     width: 90%;
-    max-width: 1280px;
+    max-width: 1280px; /* Largura máxima um pouco maior */
     margin: 0 auto;
-    padding: 0;
+    padding: 0; /* Container não define padding vertical aqui, seções definem */
 }
 
 /* Animações de Entrada */
@@ -154,11 +154,11 @@ a:hover {
     color: var(--primary-red);
 }
 
-/* SEÇÃO PRINCIPAL / BANNER HERO - AGORA COM GRADIENTE ANIMADO */
+/* SEÇÃO PRINCIPAL / BANNER HERO */
 .hero-banner {
-    background: linear-gradient(-45deg, var(--white-bg), var(--light-bg), var(--white-bg), var(--light-bg)); /* Gradiente com cores suaves */
-    background-size: 400% 400%; /* Tamanho maior para permitir a animação */
-    animation: gradientAnimation 15s ease infinite; /* Aplica a animação */
+    background: linear-gradient(-45deg, var(--white-bg), var(--light-bg), var(--white-bg), var(--light-bg));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
     color: var(--dark-blue-gray);
     text-align: center;
     padding: var(--section-padding-desktop) 20px;
@@ -440,7 +440,7 @@ section p {
 }
 
 .brand-logos img {
-    max-width: 150px;
+    max-width: 150px; /* Tamanho geral para logos */
     height: auto;
     filter: grayscale(100%);
     opacity: 0.5;
@@ -452,6 +452,13 @@ section p {
     opacity: 1;
     transform: scale(1.1);
 }
+
+/* Estilo específico para o logo da Lorenzetti (para diminuir) */
+.brands-section .lorenzetti-logo {
+    max-width: 80px; /* Tamanho reduzido para a Lorenzetti */
+    height: auto;
+}
+
 
 /* Seção Sobre Nós / Especialidade */
 .about-specialty-section p {
@@ -553,15 +560,14 @@ section p {
 }
 
 .floating-whatsapp a {
-    background-color: var(--secondary-green);
-    color: var(--white-bg);
+    background-color: var(--secondary-green); /* Fundo verde padrão */
+    color: var(--white-bg); /* Cor para o ícone padrão, se usado */
     width: 60px;
     height: 60px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.3rem; /* Tamanho do ícone */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     transition: all var(--transition-speed);
 }
@@ -569,6 +575,18 @@ section p {
 .floating-whatsapp a:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.floating-whatsapp a img { /* Estilo para a IMAGEM dentro do botão flutuante */
+    width: 70%; /* A imagem preenche 70% da largura do botão */
+    height: auto; /* Mantém a proporção */
+    display: block; /* Garante que a imagem se comporte como um bloco */
+    margin: 0 auto; /* Centraliza a imagem dentro do botão */
+    object-fit: contain; /* Garante que a imagem caiba sem cortar */
+    transition: transform var(--transition-speed);
+}
+.floating-whatsapp a:hover img { /* Efeito de hover na imagem */
+    transform: scale(1.1);
 }
 
 
@@ -630,9 +648,13 @@ section p {
     .service-cards .card {
         padding: 30px;
     }
-    .brands-section img {
-        max-width: 80px;
+    .brands-section img { /* Ajuste geral para logos em tablet */
+        max-width: 80px; /* Reduz o tamanho padrão das logos */
     }
+    .brands-section .lorenzetti-logo { /* Mantém ajuste específico para Lorenzetti em tablet */
+        max-width: 60px; /* Diminui ainda mais a Lorenzetti em tablet */
+    }
+
     .about-images {
         display: block;
         margin-top: 40px;
@@ -651,14 +673,14 @@ section p {
         max-height: 60px;
     }
     .main-nav ul {
-        flex-direction: row; /* Alterado para horizontal em mobile */
-        justify-content: space-around; /* Distribui o espaço */
-        gap: 5px; /* Reduz o gap para caber tudo */
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 5px;
         margin-top: 10px;
     }
     .main-nav ul li a {
-        font-size: 0.8rem; /* Fonte menor para caber */
-        padding: 5px; /* Padding menor */
+        font-size: 0.8rem;
+        padding: 5px;
     }
     .main-nav ul li a::after {
         bottom: -2px;
@@ -709,20 +731,16 @@ section p {
     .floating-whatsapp a {
         width: 50px;
         height: 50px;
-        background-color: transparent; /* Fundo transparente para o link do botão */
-        box-shadow: none; /* Remove a sombra do link para a imagem ficar limpa */
+        background-color: var(--secondary-green); /* Adicionado background-color de volta */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Adicionado box-shadow de volta */
     }
-    .floating-whatsapp a img { /* Estiliza a imagem dentro do botão */
-        width: 100%; /* A imagem preenche o botão */
-        height: 100%;
-        object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
-        transition: transform var(--transition-speed);
+    .floating-whatsapp a img {
+        width: 70%;
+        height: auto;
+        object-fit: contain;
     }
-    .floating-whatsapp a:hover img { /* Efeito de hover na imagem */
+    .floating-whatsapp a:hover {
         transform: scale(1.1);
-    }
-    /* Remove os estilos do ícone Font Awesome, já que agora é uma imagem */
-    .floating-whatsapp a i {
-        display: none;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
     }
 }
