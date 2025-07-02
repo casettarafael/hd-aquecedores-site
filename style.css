@@ -68,10 +68,8 @@ a:hover {
 /* CABEÇALHO / NAVEGAÇÃO */
 .main-header {
     background: white; /* AGORA É BRANCO! */
-    padding: 2rem 0; /* AUMENTADO O PADDING PARA MAIOR ALTURA DA FAIXA */
+    padding: 4rem 0; /* AUMENTADO MAIS AINDA O PADDING PARA MAIOR ALTURA DA FAIXA */
     box-shadow: 0 2px 10px var(--shadow-color);
-    position: sticky; /* Fixa o cabeçalho no topo ao rolar */
-    top: 0;
     z-index: 1000;
 }
 
@@ -92,7 +90,7 @@ a:hover {
 }
 
 .main-header .header-logo-img {
-    max-height: 150px; /* LOGO AINDA MAIOR AQUI! */
+    max-height: 180px; /* LOGO MAIOR AQUI! */
     width: auto; /* Mantém a proporção da imagem */
     transition: transform 0.3s ease; /* Mantemos a transição para outros efeitos */
 }
@@ -381,8 +379,11 @@ section p {
     .main-header .container {
         flex-direction: column;
     }
+    .main-header { /* Ajusta o padding para tela mobile */
+        padding: 3rem 0; /* Aumentado um pouco mais para o mobile também */
+    }
     .main-nav ul li {
-        margin: 0 8px;
+        margin: 0 8px; /* Mantém espaçamento horizontal em mobile se não empilhar */
     }
     .main-header .logo {
         margin-bottom: 15px;
@@ -390,7 +391,7 @@ section p {
 
     /* Ajustes para o logo em telas menores */
     .main-header .header-logo-img {
-        max-height: 90px; /* Reduz a altura do logo em telas menores (ajustado para 90px) */
+        max-height: 120px; /* LOGO MAIOR NO MOBILE TAMBÉM (ajustado para 120px) */
     }
 
     .hero-banner {
