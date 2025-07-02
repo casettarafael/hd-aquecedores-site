@@ -120,9 +120,7 @@ a:hover {
 .main-nav ul {
     list-style: none;
     display: flex;
-    flex-direction: row; /* FORÇA HORIZONTAL EM TODAS AS TELAS */
-    justify-content: center; /* Centraliza os links no mobile */
-    gap: 30px; /* Espaço entre os itens da navegação */
+    gap: 30px;
     padding: 0;
     margin: 0;
 }
@@ -156,19 +154,34 @@ a:hover {
     color: var(--primary-red);
 }
 
-/* SEÇÃO PRINCIPAL / BANNER HERO */
+/* SEÇÃO PRINCIPAL / BANNER HERO - AGORA COM GRADIENTE ANIMADO */
 .hero-banner {
-    background: var(--white-bg) url('https://via.placeholder.com/1920x800/F0F2F5/A0A0A0?text=Sua+imagem+de+fundo+aqui') no-repeat center center/cover;
-    background-blend-mode: multiply;
+    background: linear-gradient(-45deg, var(--white-bg), var(--light-bg), var(--white-bg), var(--light-bg)); /* Gradiente com cores suaves */
+    background-size: 400% 400%; /* Tamanho maior para permitir a animação */
+    animation: gradientAnimation 15s ease infinite; /* Aplica a animação */
     color: var(--dark-blue-gray);
     text-align: center;
     padding: var(--section-padding-desktop) 20px;
     min-height: 600px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza itens horizontalmente no flex-column */
-    justify-content: center; /* Centraliza itens verticalmente no flex-column */
+    align-items: center;
+    justify-content: center;
 }
+
+/* Keyframes para a animação do gradiente */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 .hero-banner h2 {
     font-size: clamp(2.8rem, 6vw, 4.5rem);
@@ -176,12 +189,12 @@ a:hover {
     font-weight: 800;
     color: var(--dark-blue-gray);
     text-shadow: none;
-    text-align: center; /* Centraliza o texto dentro do h2 */
-    width: 100%; /* Garante que o h2 ocupe a largura total disponível */
-    padding: 0 20px; /* Adiciona um padding horizontal para não colar nas bordas */
-    box-sizing: border-box; /* Garante que o padding não aumente a largura além do 100% */
-    margin-left: auto; /* Força centralização do bloco */
-    margin-right: auto; /* Força centralização do bloco */
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Estilo para o texto de destaque no Hero */
@@ -548,7 +561,7 @@ section p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.3rem;
+    font-size: 2.3rem; /* Tamanho do ícone */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     transition: all var(--transition-speed);
 }
@@ -647,7 +660,7 @@ section p {
         font-size: 0.8rem; /* Fonte menor para caber */
         padding: 5px; /* Padding menor */
     }
-    .main-nav ul li a::after { /* Underline animado (ajusta posição) */
+    .main-nav ul li a::after {
         bottom: -2px;
     }
     .hero-banner {
@@ -696,6 +709,20 @@ section p {
     .floating-whatsapp a {
         width: 50px;
         height: 50px;
-        font-size: 2rem;
+        background-color: transparent; /* Fundo transparente para o link do botão */
+        box-shadow: none; /* Remove a sombra do link para a imagem ficar limpa */
+    }
+    .floating-whatsapp a img { /* Estiliza a imagem dentro do botão */
+        width: 100%; /* A imagem preenche o botão */
+        height: 100%;
+        object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+        transition: transform var(--transition-speed);
+    }
+    .floating-whatsapp a:hover img { /* Efeito de hover na imagem */
+        transform: scale(1.1);
+    }
+    /* Remove os estilos do ícone Font Awesome, já que agora é uma imagem */
+    .floating-whatsapp a i {
+        display: none;
     }
 }
