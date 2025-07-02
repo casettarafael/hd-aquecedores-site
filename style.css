@@ -1,0 +1,449 @@
+/* Importa fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Variáveis CSS para cores - facilite a mudança futura! */
+:root {
+    --primary-red: #E44D26; /* Cor principal, como o destaque do Google */
+    --secondary-green: #25D366; /* Verde do WhatsApp */
+    --dark-bg: #222831; /* Fundo escuro */
+    --light-bg: #EEEEEE; /* Fundo claro */
+    --text-dark: #333333;
+    --text-light: #F9F9F9;
+    --card-bg: #FFFFFF;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos Globais */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+    overflow-x: hidden; /* Evita barras de rolagem horizontais em animações */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-red);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0; /* Mais padding para espaçamento */
+}
+
+/* Animação de Fade-In para Seções */
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0; /* Esconde inicialmente */
+    animation: fadeInBottom 1s ease-out forwards; /* Aplica a animação */
+}
+
+/* Atraso para animação de várias seções - ajuste conforme a ordem das suas seções */
+.fade-in:nth-of-type(2) { animation-delay: 0.2s; } /* Serviços */
+.fade-in:nth-of-type(3) { animation-delay: 0.4s; } /* Marcas */
+.fade-in:nth-of-type(4) { animation-delay: 0.6s; } /* Sobre Nós */
+.fade-in:nth-of-type(5) { animation-delay: 0.8s; } /* Contato */
+
+
+/* CABEÇALHO / NAVEGAÇÃO */
+.main-header {
+    background: var(--dark-bg);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0; /* Remove padding extra do container aqui */
+}
+
+/* Estilos para o Logo no Cabeçalho */
+.main-header .logo {
+    margin: 0; /* Remove a margem padrão do h1 */
+}
+
+.main-header .logo-link {
+    display: block; /* Garante que o link ocupe o espaço para alinhar a imagem */
+}
+
+.main-header .header-logo-img {
+    max-height: 100px; /* ALTURA AUMENTADA AQUI! */
+    width: auto; /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease; /* Mantemos a transição para outros efeitos */
+}
+
+.main-header .logo-link:hover .header-logo-img {
+    transform: scale(1.05); /* Um pequeno zoom no hover */
+    box-shadow: 0 0 10px rgba(228, 77, 38, 0.5); /* Sombra com a cor primária */
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav ul li {
+    display: inline-block; /* Use inline-block para mais controle */
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    position: relative;
+    padding-bottom: 5px; /* Espaço para o underline animado */
+    transition: color 0.3s ease;
+}
+
+/* Animação de underline para navegação */
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-red);
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.main-nav ul li a:hover::after {
+    width: 100%;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-red);
+}
+
+/* SEÇÃO PRINCIPAL / BANNER HERO */
+.hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1500x700/333/eee?text=Sua+imagem+de+fundo+aqui') no-repeat center center/cover;
+    color: var(--text-light);
+    text-align: center;
+    padding: 120px 0; /* Mais padding para destaque */
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-banner h2 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem); /* Tamanho de fonte responsivo */
+    margin-bottom: 25px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero-banner .highlight-text {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    background-color: var(--secondary-green);
+    padding: 12px 25px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 40px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-whatsapp, .btn-call {
+    display: inline-block;
+    padding: 16px 35px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    margin: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--text-light);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-whatsapp {
+    background: var(--secondary-green);
+}
+
+.btn-whatsapp:hover {
+    background: #1eaf53; /* Tom mais escuro do verde */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-call {
+    background: var(--primary-red);
+}
+
+.btn-call:hover {
+    background: #c23b1a; /* Tom mais escuro do vermelho */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-whatsapp i {
+    margin-right: 10px;
+    font-size: 1.4rem;
+    vertical-align: middle;
+}
+
+/* Seções Gerais de Conteúdo */
+section {
+    padding: 80px 0; /* Mais padding para seções */
+    text-align: center;
+}
+
+section:nth-of-type(odd) { /* Altera o fundo de seções ímpares */
+    background-color: var(--light-bg);
+}
+
+section:nth-of-type(even) { /* Altera o fundo de seções pares */
+    background-color: #f9f9f9;
+}
+
+
+section h3, section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--primary-red);
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+section p {
+    font-size: 1.05rem;
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+}
+
+/* Seção de Serviços */
+.services-section h3 {
+    color: var(--dark-bg); /* Cor de destaque para título de serviço */
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Mais espaçamento entre cards */
+    margin-top: 40px;
+}
+
+.service-cards .card {
+    background: var(--card-bg);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px var(--shadow-color);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.service-cards .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-cards .card h4 {
+    color: var(--dark-bg);
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-cards .card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+/* Seção Marcas Atendidas */
+.brands-section h3 {
+    color: var(--dark-bg);
+}
+
+.brand-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Mais espaçamento entre logos */
+    margin-top: 50px;
+}
+
+.brand-logos img {
+    max-width: 160px; /* Tamanho ligeiramente maior para logos */
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.4s ease-in-out;
+}
+
+.brand-logos img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05); /* Pequeno zoom no hover */
+}
+
+/* Seção Sobre Nós / Especialidade */
+.about-specialty-section p {
+    color: var(--text-dark);
+}
+
+/* Seção Sobre Nós - Imagens */
+.about-images {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha em telas menores */
+    justify-content: center;
+    gap: 25px; /* Espaço entre as imagens */
+    margin-top: 50px; /* Espaço acima das imagens */
+}
+
+.about-images img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+    width: 300px; /* Largura base para cada imagem */
+    height: 200px; /* Altura fixa para cortar as imagens de forma uniforme */
+    object-fit: cover; /* Faz com que a imagem cubra o espaço sem distorcer */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 8px 20px var(--shadow-color); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-images img:hover {
+    transform: translateY(-5px) scale(1.02); /* Leve levantamento e zoom no hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* Sombra mais intensa no hover */
+}
+
+/* Seção de Contato */
+.contact-section {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+}
+
+.contact-section h3 {
+    color: var(--primary-red);
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.contact-section a {
+    color: var(--primary-red);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-section a:hover {
+    color: #FF7F50; /* Um tom de laranja/vermelho mais claro no hover */
+    text-decoration: underline;
+}
+
+/* Rodapé */
+.main-footer {
+    background: #111111;
+    color: #AAAAAA;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE (MEDIA QUERIES) */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+    }
+    .main-nav ul li {
+        margin: 0 8px;
+    }
+    .main-header .logo {
+        margin-bottom: 15px;
+    }
+
+    /* Ajustes para o logo em telas menores */
+    .main-header .header-logo-img {
+        max-height: 80px; /* Reduz a altura do logo em telas menores (ajustado para 80px) */
+    }
+
+    .hero-banner {
+        padding: 80px 0;
+    }
+
+    .btn-whatsapp, .btn-call {
+        width: 90%;
+        max-width: 350px;
+        display: block;
+        margin: 15px auto;
+        font-size: 1.1rem;
+        padding: 12px 25px;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .brand-logos img {
+    max-width: 120px;
+    margin: 15px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* Responsividade para as imagens da seção Sobre Nós */
+.about-images {
+    gap: 20px;
+}
+.about-images img {
+    width: 100%; /* Em telas menores, cada imagem ocupa a largura total */
+    height: 220px; /* Ajuste a altura se necessário */
+}
+}
+
+@media (max-width: 480px) {
+    .hero-banner h2 {
+        font-size: 1.8rem;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-nav ul li {
+        margin: 8px 0;
+    }
+    .service-cards .card {
+        padding: 25px;
+    }
+    .about-images img {
+        height: 180px; /* Altura ainda menor para celulares */
+    }
+}
