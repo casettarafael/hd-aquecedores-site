@@ -560,29 +560,25 @@ section p {
 }
 
 .floating-whatsapp a {
-    background-color: var(--secondary-green); /* Fundo verde padrão */
-    color: var(--white-bg); /* Cor para o ícone padrão, se usado */
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    /* REMOVIDAS: background-color, width, height, border-radius */
+    display: flex; /* Mantido para centralizar a imagem */
+    justify-content: center; /* Mantido para centralizar a imagem */
+    align-items: center; /* Mantido para centralizar a imagem */
+    box-shadow: none; /* Removida a sombra se não houver fundo */
     transition: all var(--transition-speed);
 }
 
 .floating-whatsapp a:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Sombra mais sutil no hover, se desejar */
 }
 
 .floating-whatsapp a img { /* Estilo para a IMAGEM dentro do botão flutuante */
-    width: 70%; /* A imagem preenche 70% da largura do botão */
-    height: auto; /* Mantém a proporção */
-    display: block; /* Garante que a imagem se comporte como um bloco */
-    margin: 0 auto; /* Centraliza a imagem dentro do botão */
-    object-fit: contain; /* Garante que a imagem caiba sem cortar */
+    width: 60px; /* Definindo um tamanho explícito para o ícone */
+    height: 60px; /* Definindo um tamanho explícito para o ícone */
+    display: block;
+    margin: 0; /* Removendo o auto margin, pois o flexbox já centraliza */
+    object-fit: contain;
     transition: transform var(--transition-speed);
 }
 .floating-whatsapp a:hover img { /* Efeito de hover na imagem */
@@ -729,18 +725,18 @@ section p {
         right: 15px;
     }
     .floating-whatsapp a {
-        width: 50px;
-        height: 50px;
-        background-color: var(--secondary-green); /* Adicionado background-color de volta */
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Adicionado box-shadow de volta */
+        width: auto; /* Ajusta a largura para o conteúdo */
+        height: auto; /* Ajusta a altura para o conteúdo */
+        /* background-color e border-radius foram removidos */
+        box-shadow: none; /* Removida a sombra se não houver fundo */
     }
     .floating-whatsapp a img {
-        width: 70%;
-        height: auto;
+        width: 50px; /* Tamanho do ícone para mobile */
+        height: 50px; /* Tamanho do ícone para mobile */
         object-fit: contain;
     }
     .floating-whatsapp a:hover {
         transform: scale(1.1);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Sombra mais sutil no hover */
     }
 }
