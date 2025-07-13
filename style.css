@@ -3,7 +3,7 @@
 
 /* Variáveis CSS para Cores e Propriedades Globais */
 :root {
-    --primary-red: #E44D26; /* Vermelho principal para destaque */
+    --primary-red: #7e0000; /* Vermelho principal para destaque */
     --secondary-green: #25D366; /* Verde do WhatsApp/Botões */
     --accent-blue: #3498DB; /* Um azul para acento, inspirado no logo */
     --dark-blue-gray: #2C3E50; /* Cor escura para cabeçalhos e textos principais */
