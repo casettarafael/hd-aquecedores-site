@@ -80,9 +80,45 @@ section h3::after { content: ''; display: block; width: 80px; height: 4px; backg
 .sales-call-to-action { margin-top: 50px; padding: 30px; background-color: var(--light-bg); border-radius: 8px; max-width: 900px; margin-left: auto; margin-right: auto; }
 
 /* MARCAS */
-.brands-section .swiper-slide img { max-width: 150px; filter: grayscale(100%); opacity: 0.5; }
-.brands-section .swiper-slide img:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
-.brands-section .lorenzetti-logo { max-width: 80px; }
+#marcas {
+    background-color: #f9f9f9; /* Força um cinza muito claro, quase branco */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.brands-section .swiper-wrapper {
+    align-items: center; /* Garante que logos de alturas diferentes fiquem alinhados no centro */
+}
+
+.brands-section .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brands-section .swiper-slide img {
+    max-width: 140px;
+    max-height: 70px; /* Limita a altura para nenhum logo ficar gigante */
+    width: auto;
+    
+    /* O Efeito Visual (Cinza Esmaecido) */
+    filter: grayscale(100%); /* Tira toda a cor */
+    opacity: 0.5; /* Deixa clarinho (fantasma) */
+    mix-blend-mode: multiply; /* TRUQUE: Remove o fundo branco quadrado da imagem se ele existir */
+    transition: all 0.3s ease;
+}
+
+.brands-section .swiper-slide img:hover {
+    filter: grayscale(0%); /* Volta a cor original ao passar o mouse */
+    opacity: 1; /* Fica nítido */
+    transform: scale(1.1); /* Leve zoom */
+    cursor: pointer;
+}
+
+/* Ajuste específico se o logo da Lorenzetti for muito pequeno ou grande */
+.brands-section .lorenzetti-logo { 
+    max-width: 100px !important; 
+}
 
 /* GALERIA */
 .gallery-section { background-color: var(--light-bg); }
