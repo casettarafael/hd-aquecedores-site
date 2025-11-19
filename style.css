@@ -549,3 +549,73 @@ section h3::after {
         font-size: 30px;
     }
 }
+/* =========================================
+   LIGHTBOX (ZOOM NA IMAGEM)
+   ========================================= */
+
+/* O cursor muda para uma lupa ao passar o mouse na foto do produto */
+.product-image {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+/* O Fundo Preto (Modal) */
+#image-modal {
+    display: none; /* Começa escondido */
+    position: fixed;
+    z-index: 99999; /* Fica na frente de TUDO */
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Preto 90% transparente */
+    align-items: center;
+    justify-content: center;
+}
+
+/* A Imagem dentro do Modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px; /* Tamanho máximo da imagem na tela */
+    max-height: 80vh; /* Não deixa passar da altura da tela */
+    object-fit: contain;
+    border-radius: 8px;
+    animation: zoomIn 0.3s; /* Efeito de zoom ao abrir */
+}
+
+/* Botão de Fechar (X) */
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 100000;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #25D366; /* Fica verde ao passar o mouse */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animação de Zoom */
+@keyframes zoomIn {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* Ajuste para celular */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 95%;
+    }
+}

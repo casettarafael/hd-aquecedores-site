@@ -118,3 +118,41 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
+
+// ==========================================
+// SCRIPT DO LIGHTBOX (ZOOM NAS IMAGENS)
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    // Pega o modal e a imagem de dentro dele
+    var modal = document.getElementById("image-modal");
+    var modalImg = document.getElementById("img-full");
+
+    // Pega todas as imagens com a classe .product-image
+    var images = document.querySelectorAll(".product-image");
+
+    // Verifica se o modal existe na página antes de executar (evita erros)
+    if (modal && modalImg) {
+        // Adiciona o evento de clique em CADA imagem de produto
+        images.forEach(function(img) {
+            img.addEventListener("click", function(){
+                modal.style.display = "flex"; // Mostra o modal
+                modalImg.src = this.src;      // Pega a foto clicada e joga no modal
+            });
+        });
+
+        // Fecha o modal ao clicar no X
+        var span = document.getElementsByClassName("close-modal")[0];
+        if (span) {
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+        }
+
+        // Fecha o modal ao clicar fora da imagem (no fundo preto)
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+});
