@@ -1,15 +1,18 @@
 /* Importa fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
-/* Variáveis CSS */
+/* =========================================
+   VARIÁVEIS CSS
+   ========================================= */
 :root {
-    --primary-red: #2C3E50;
-    --secondary-green: #25D366;
-    --accent-blue: #3498DB;
-    --dark-blue-gray: #2C3E50;
-    --text-body: #1e1d1d;
-    --light-bg: #1e98ea;
+    --primary-dark: #2C3E50;      /* Azul Escuro (quase preto) */
+    --secondary-green: #25D366;   /* Verde WhatsApp */
+    --accent-blue: #3498DB;       /* Azul Claro */
+    --dark-blue-gray: #2C3E50;    /* Texto Escuro */
+    --text-body: #1e1d1d;         /* Texto do corpo */
+    --light-bg: #1e98ea;          /* Fundo Azul (Padrão do tema) */
     --white-bg: #FFFFFF;
+    --gray-bg: #f9f9f9;           /* Novo cinza claro para marcas */
     --border-light: #E9ECEF;
     --shadow-medium: rgba(0, 0, 0, 0.12);
     --shadow-strong: rgba(0, 0, 0, 0.2);
@@ -19,125 +22,432 @@
     --transition-speed: 0.3s ease;
 }
 
-/* Reset e Globais */
+/* =========================================
+   RESET E GLOBAIS
+   ========================================= */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    font-family: 'Poppins', sans-serif; line-height: 1.7; color: var(--text-body);
-    background-color: var(--light-bg); overflow-x: hidden; scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: var(--text-body);
+    background-color: var(--light-bg);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
-h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--dark-blue-gray); }
-a { text-decoration: none; color: var(--primary-red); transition: all var(--transition-speed); }
+
+h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--dark-blue-gray);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-dark);
+    transition: all var(--transition-speed);
+}
 a:hover { color: #FF6347; }
+
 .container { width: 90%; max-width: 1280px; margin: 0 auto; padding: 0; }
 
-/* Seções Padrão */
-section { padding: var(--section-padding-desktop) 0; text-align: center; overflow: hidden; }
+/* =========================================
+   SEÇÕES PADRÃO
+   ========================================= */
+section {
+    padding: var(--section-padding-desktop) 0;
+    text-align: center;
+    overflow: hidden;
+}
 section:nth-of-type(odd) { background-color: var(--white-bg); }
 section:nth-of-type(even) { background-color: var(--light-bg); }
-section h3 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin-bottom: 40px; text-transform: uppercase; position: relative; }
-section h3::after { content: ''; display: block; width: 80px; height: 4px; background-color: var(--primary-red); margin: 15px auto 0 auto; border-radius: 2px; }
 
-/* CABEÇALHO */
-.main-header { background: var(--white-bg); padding: 1.5rem 0; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); position: sticky; top: 0; z-index: 1000; }
-.main-header .container { display: flex; justify-content: space-between; align-items: center; }
+section h3 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    position: relative;
+}
+section h3::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-dark);
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* =========================================
+   CABEÇALHO (HEADER)
+   ========================================= */
+.main-header {
+    background: var(--white-bg);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .header-logo-img { max-height: 100px; }
-.main-nav ul { list-style: none; display: flex; gap: 30px; }
-.main-nav ul li a { color: var(--dark-blue-gray); font-weight: 600; padding: 5px 0; position: relative; }
 
-/* HERO */
-.hero-banner { background-color: var(--light-bg); padding: var(--section-padding-desktop) 20px; }
-.hero-banner h2 { font-size: clamp(2.8rem, 6vw, 4.5rem); margin-bottom: 30px; font-weight: 800; }
-.hero-highlight-text { background-color: var(--secondary-green); color: var(--white-bg); padding: 10px 20px; border-radius: 8px; display: inline-block; margin-bottom: 30px; font-weight: 600; }
-.hero-buttons-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-.btn-primary-whatsapp, .btn-primary-call { padding: 15px 30px; border-radius: 8px; font-weight: 600; }
-.btn-primary-whatsapp { background: var(--secondary-green); color: var(--white-bg); border: 2px solid var(--secondary-green); }
-.btn-primary-call { background: var(--white-bg); color: var(--primary-red); border: 2px solid var(--primary-red); }
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.main-nav ul li a {
+    color: var(--dark-blue-gray);
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+}
 
-/* SEÇÃO SERVIÇOS (SWIPER) */
-.services-section h3 { color: var(--primary-red); }
+/* =========================================
+   HERO BANNER
+   ========================================= */
+.hero-banner {
+    background-color: var(--light-bg);
+    padding: var(--section-padding-desktop) 20px;
+}
+.hero-banner h2 {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+.hero-highlight-text {
+    background-color: var(--secondary-green);
+    color: var(--white-bg);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.hero-buttons-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.btn-primary-whatsapp, .btn-primary-call {
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.btn-primary-whatsapp {
+    background: var(--secondary-green);
+    color: var(--white-bg);
+    border: 2px solid var(--secondary-green);
+}
+.btn-primary-call {
+    background: var(--white-bg);
+    color: var(--primary-dark);
+    border: 2px solid var(--primary-dark);
+}
+
+/* =========================================
+   SERVIÇOS (SWIPER)
+   ========================================= */
+.services-section h3 { color: var(--primary-dark); }
 .swiper { width: 100%; padding-top: 50px; padding-bottom: 50px; }
-.swiper-slide .card { background: var(--white-bg); padding: 40px; border-radius: 8px; box-shadow: 0 8px 25px var(--shadow-medium); border: 1px solid var(--border-light); height: 100%; }
-.swiper-slide .card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px var(--shadow-strong); }
-.swiper-button-next, .swiper-button-prev { color: var(--dark-blue-gray); background: rgba(255, 255, 255, 0.8); border-radius: 50%; }
 
-/* VENDAS (4 COLUNAS) */
-.sales-section { background-color: var(--white-bg); }
+.swiper-slide .card {
+    background: var(--white-bg);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    border: 1px solid var(--border-light);
+    height: 100%;
+}
+.swiper-slide .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px var(--shadow-strong);
+}
+.swiper-button-next, .swiper-button-prev {
+    color: var(--dark-blue-gray);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+/* =========================================
+   VENDAS (GRID DE PRODUTOS)
+   ========================================= */
+.sales-section {
+    background-color: var(--white-bg);
+    padding-bottom: 0 !important; /* FIX: Remove espaço vazio abaixo */
+}
+
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px; margin-top: 40px; padding: 0 20px;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0 20px;
 }
+
 .product-card {
-    background-color: var(--white-bg); border: 1px solid var(--border-light); border-radius: var(--border-radius-base);
-    padding: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); height: 100%; display: flex; flex-direction: column; justify-content: space-between;
+    background-color: var(--white-bg);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-base);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .product-card:hover { transform: translateY(-5px); }
-.product-image { width: 100%; max-height: 180px; object-fit: contain; margin-bottom: 15px; padding: 5px; }
-.product-info { flex-grow: 1; }
-.product-card h4 { color: var(--primary-red); margin-bottom: 5px; font-size: 1.25em; font-weight: 600; }
-.product-card p { font-size: 0.9em; color: var(--text-body); margin: 0 auto 15px auto; }
-.btn-product-whatsapp { background-color: var(--secondary-green); color: var(--white-bg); padding: 10px 20px; border-radius: 50px; display: inline-flex; justify-content: center; width: 100%; font-weight: 600; }
-.sales-call-to-action { margin-top: 50px; padding: 30px; background-color: var(--light-bg); border-radius: 8px; max-width: 900px; margin-left: auto; margin-right: auto; }
 
-/* MARCAS */
+.product-image {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+.product-info { flex-grow: 1; }
+
+.product-card h4 {
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+.product-card p {
+    font-size: 0.9em;
+    color: var(--text-body);
+    margin: 0 auto 15px auto;
+}
+
+.btn-product-whatsapp {
+    background-color: var(--secondary-green);
+    color: var(--white-bg);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    font-weight: 600;
+}
+
+/* =========================================
+   CTA - CAIXA AZUL DE DÚVIDAS
+   ========================================= */
+.sales-call-to-action {
+    background-color: #2daae1;
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    margin-top: 50px;
+    margin-bottom: 0; /* FIX: Remove margem inferior para colar na próxima seção */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(45, 170, 225, 0.3);
+}
+
+.cta-content h4 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.cta-content p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.btn-cta-catalogo {
+    background-color: #25D366;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.btn-cta-catalogo:hover {
+    background-color: #1ebe57;
+    transform: translateY(-3px);
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .sales-call-to-action {
+        flex-direction: row;
+        text-align: left;
+        padding: 40px 60px;
+    }
+    .cta-content {
+        padding-right: 20px;
+    }
+}
+
+/* =========================================
+   MARCAS (LOGOS) - COM CORREÇÃO DE COR
+   ========================================= */
 #marcas {
-    background-color: #f9f9f9; /* Força um cinza muito claro, quase branco */
-    padding-top: 60px;
+    background-color: var(--gray-bg) !important; /* Fundo Cinza Claro */
+    padding-top: 50px;  /* Espaço equilibrado */
     padding-bottom: 60px;
+    margin-top: 0;      /* Garante que cola na seção anterior */
+}
+
+/* FIX: Força o título e texto a serem ESCUROS para aparecer no fundo claro */
+#marcas h3 {
+    color: var(--dark-blue-gray) !important;
+    margin-top: 0;
+}
+#marcas p {
+    color: var(--dark-blue-gray) !important;
+    opacity: 1;
+}
+#marcas h3::after {
+    background-color: var(--dark-blue-gray) !important;
 }
 
 .brands-section .swiper-wrapper {
-    align-items: center; /* Garante que logos de alturas diferentes fiquem alinhados no centro */
+    align-items: center;
 }
-
 .brands-section .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .brands-section .swiper-slide img {
     max-width: 140px;
-    max-height: 70px; /* Limita a altura para nenhum logo ficar gigante */
+    max-height: 70px;
     width: auto;
     
-    /* O Efeito Visual (Cinza Esmaecido) */
-    filter: grayscale(100%); /* Tira toda a cor */
-    opacity: 0.5; /* Deixa clarinho (fantasma) */
-    mix-blend-mode: multiply; /* TRUQUE: Remove o fundo branco quadrado da imagem se ele existir */
+    filter: grayscale(100%);
+    opacity: 0.5;
+    mix-blend-mode: multiply;
     transition: all 0.3s ease;
 }
-
 .brands-section .swiper-slide img:hover {
-    filter: grayscale(0%); /* Volta a cor original ao passar o mouse */
-    opacity: 1; /* Fica nítido */
-    transform: scale(1.1); /* Leve zoom */
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
     cursor: pointer;
 }
-
-/* Ajuste específico se o logo da Lorenzetti for muito pequeno ou grande */
 .brands-section .lorenzetti-logo { 
     max-width: 100px !important; 
 }
 
-/* GALERIA */
+/* =========================================
+   GALERIA
+   ========================================= */
 .gallery-section { background-color: var(--light-bg); }
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 0 20px; max-width: 1200px; margin: 40px auto; }
-.gallery-item img { width: 100%; height: 280px; object-fit: cover; }
-.image-caption { padding: 15px; font-size: 0.95em; color: var(--dark-blue-gray); }
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+.image-caption {
+    padding: 15px;
+    font-size: 0.95em;
+    color: var(--dark-blue-gray);
+}
 
-/* CONTATO E RODAPÉ */
-.contact-section { background-color: var(--dark-blue-gray); color: var(--white-bg); }
-.contact-section h3 { color: var(--white-bg); }
-.contact-section p { color: var(--white-bg); font-size: 1.15rem; }
-.main-footer { background: #1C2833; color: #99AAB5; padding: 30px 0; }
+/* =========================================
+   CONTATO E RODAPÉ
+   ========================================= */
+.contact-section {
+    background-color: var(--dark-blue-gray);
+    color: var(--white-bg);
+}
+.contact-section h3, .contact-section p, .contact-section a {
+    color: var(--white-bg);
+}
+.contact-section p { font-size: 1.15rem; }
+.contact-section a:hover { color: var(--secondary-green); }
 
-/* BOTÃO FLUTUANTE */
-.floating-whatsapp { position: fixed; bottom: 25px; right: 25px; z-index: 9999; }
-.floating-whatsapp a { width: 60px; height: 60px; background-color: var(--secondary-green); color: var(--white-bg); border-radius: 50%; font-size: 34px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); }
+.main-footer {
+    background: #1C2833;
+    color: #99AAB5;
+    padding: 30px 0;
+}
+/* Ajuste novo para os links de cidade no rodapé */
+.footer-links-cidades {
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 15px;
+}
+.footer-links-cidades h4 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+.footer-links-cidades ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links-cidades li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.footer-links-cidades a {
+    color: #99AAB5;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+.footer-links-cidades a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
 
-/* RESPONSIVIDADE (MEDIA QUERIES) */
-@media (max-width: 992px) { /* Tablets grandes */
+/* =========================================
+   BOTÃO FLUTUANTE (WHATSAPP)
+   ========================================= */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+}
+.floating-whatsapp a {
+    width: 60px;
+    height: 60px;
+    background-color: var(--secondary-green);
+    color: var(--white-bg);
+    border-radius: 50%;
+    font-size: 34px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================
+   RESPONSIVIDADE GERAL
+   ========================================= */
+@media (max-width: 992px) { /* Tablets */
     .products-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
     .product-image { max-height: 150px; }
     .main-header .container { flex-direction: column; gap: 15px; }
@@ -145,17 +455,97 @@ section h3::after { content: ''; display: block; width: 80px; height: 4px; backg
     .hero-buttons-group { flex-direction: column; gap: 15px; }
     .btn-primary-whatsapp, .btn-primary-call { min-width: 85%; }
     section { padding: var(--section-padding-mobile) 0; }
-    .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 }
 
-@media (max-width: 767px) { /* Mobile */
+@media (max-width: 767px) { /* Celulares */
     .products-grid { grid-template-columns: 1fr; padding: 0 10px; }
     .main-header .header-logo-img { max-height: 60px; }
     .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
     .main-nav ul li a { font-size: 0.8rem; }
     .hero-banner { min-height: 400px; padding: 50px 10px; }
     .btn-primary-whatsapp, .btn-primary-call { min-width: 95%; font-size: 0.9rem; padding: 10px 18px; }
-    .sales-call-to-action a.btn-product-whatsapp { min-width: 90%; }
+    .btn-product-whatsapp { min-width: 90%; }
     .gallery-grid { grid-template-columns: 1fr; padding: 0 10px; }
     .floating-whatsapp { bottom: 15px; right: 15px; }
+}
+/* ==========================================================
+   CORREÇÃO DE EMERGÊNCIA: TEXTO DO CONTATO (ÍCONES)
+   ========================================================== */
+
+/* 1. Garante que o fundo seja branco e o texto base seja escuro */
+#contato, .contact-section {
+    background-color: #ffffff !important; /* Fundo Branco */
+    color: #2C3E50 !important;            /* Texto Azul Escuro (quase preto) */
+}
+
+/* 2. Força TODAS as frases, links e títulos dentro do contato a serem escuros */
+#contato h3, 
+#contato p, 
+#contato a {
+    color: #2C3E50 !important; 
+    font-weight: 600 !important; /* Deixa um pouco mais negrito para ler melhor */
+}
+
+/* 3. Garante que o traço embaixo do título "Fale Conosco" apareça */
+#contato h3::after {
+    background-color: #2C3E50 !important;
+}
+
+/* 4. Garante que os ícones (envelope, insta, face) continuem visíveis */
+#contato i {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+/* =========================================
+   BOTÃO FLUTUANTE WHATSAPP (CORRIGIDO)
+   ========================================= */
+.floating-whatsapp {
+    position: fixed;     /* OBRIGATÓRIO: Fixa na tela do navegador */
+    bottom: 30px;        /* Distância do fundo da tela */
+    right: 30px;         /* Distância da direita da tela */
+    z-index: 10000;      /* Garante que fique ACIMA de qualquer outro elemento */
+}
+
+.floating-whatsapp a {
+    width: 64px;
+    height: 64px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    /* Animação de "Pulso" para chamar atenção */
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.floating-whatsapp a:hover {
+    background-color: #1ebe57;
+    transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
+}
+
+/* Definição da animação de pulso */
+@keyframes pulse-whatsapp {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Ajuste para celular (fica um pouco menor para não atrapalhar) */
+@media (max-width: 768px) {
+    .floating-whatsapp {
+        bottom: 20px;
+        right: 20px;
+    }
+    .floating-whatsapp a {
+        width: 55px;
+        height: 55px;
+        font-size: 30px;
+    }
 }
