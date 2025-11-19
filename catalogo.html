@@ -8,6 +8,7 @@
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="icon" href="imagens/00001.png" type="image/png">
 </head>
 <body>
@@ -34,7 +35,7 @@
         </div>
     </section>
 
-    <section class="sales-section">
+    <section class="sales-section" style="padding-bottom: 60px !important;">
         <div class="container">
             
             <div style="margin-bottom: 40px; text-align: center;">
@@ -124,6 +125,15 @@
             <p>© 2025 HD AQUECEDORES. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <div id="image-modal" class="modal">
+        <span class="close-modal" onclick="document.getElementById('image-modal').style.display='none'">&times;</span>
+        <img class="modal-content" id="img-full">
+        <div id="caption"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
