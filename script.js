@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+    console.log("Scripts iniciados.");
+
     // ==================================================
-    // 1. CARROSSEL DE SERVIÇOS (PRINCIPAL)
+    // 1. CARROSSEL DE SERVIÇOS
     // ==================================================
-    // Verifica se existe o elemento antes de tentar iniciar
     if (document.querySelector(".mySwiper")) {
-        var mySwiper = new Swiper(".mySwiper", {
+        new Swiper(".mySwiper", {
             slidesPerView: 1,
             spaceBetween: 30,
             navigation: {
@@ -24,16 +24,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==================================================
-    // 2. CARROSSEL DE MARCAS (CORRIGIDO)
+    // 2. NOVO CARROSSEL DE PRODUTOS (AQUECEDORES)
+    // ==================================================
+    if (document.querySelector(".myProductsSwiper")) {
+        new Swiper(".myProductsSwiper", {
+            slidesPerView: 1, // Mobile: 1 produto por vez
+            spaceBetween: 25,
+            navigation: {
+                nextEl: ".myProductsSwiper .swiper-button-next",
+                prevEl: ".myProductsSwiper .swiper-button-prev",
+            },
+            pagination: {
+                el: ".myProductsSwiper .swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: { slidesPerView: 2, spaceBetween: 20 }, // Tablet pequeno: 2 produtos
+                992: { slidesPerView: 3, spaceBetween: 30 }, // Desktop: 3 produtos
+                1200: { slidesPerView: 4, spaceBetween: 30 }, // Telas grandes: 4 produtos
+            },
+        });
+    }
+
+    // ==================================================
+    // 3. CARROSSEL DE MARCAS
     // ==================================================
     if (document.querySelector(".myBrandsSwiper")) {
-        var brandsSwiper = new Swiper(".myBrandsSwiper", {
-            slidesPerView: 2, // No celular mostra 2
+        new Swiper(".myBrandsSwiper", {
+            slidesPerView: 2, 
             spaceBetween: 20,
-            loop: true,       // Roda infinito
-            speed: 1000,      // Transição suave
+            loop: true,       
+            speed: 1000,      
             autoplay: {
-                delay: 2000,  // Passa sozinho a cada 2 segundos
+                delay: 2000,  
                 disableOnInteraction: false,
             },
             navigation: {
@@ -53,11 +76,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==================================================
-    // 3. ANIMAÇÃO AO ROLAR (FADE IN)
+    // 4. LIGHTBOX (ZOOM)
+    // ==================================================
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("img-full");
+    const images = document.querySelectorAll(".product-image");
+
+    if (modal && modalImg) {
+        images.forEach(img => {
+            img.addEventListener("click", function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        const span = document.querySelector(".close-modal");
+        if (span) {
+            span.onclick = function() { modal.style.display = "none"; }
+        }
+        modal.onclick = function(event) {
+            if (event.target === modal) { modal.style.display = "none"; }
+        }
+    }
+
+    // ==================================================
+    // 5. ANIMAÇÃO SCROLL
     // ==================================================
     const sections = document.querySelectorAll('.animate-on-scroll');
-    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
-
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -66,39 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-    // ==================================================
-    // 4. LIGHTBOX (ZOOM NAS FOTOS DOS PRODUTOS)
-    // ==================================================
-    var modal = document.getElementById("image-modal");
-    var modalImg = document.getElementById("img-full");
-    var images = document.querySelectorAll(".product-image");
-
-    // Só executa se o modal existir na página
-    if (modal && modalImg) {
-        images.forEach(function(img) {
-            img.addEventListener("click", function(){
-                modal.style.display = "flex";
-                modalImg.src = this.src;
-            });
-        });
-
-        var span = document.getElementsByClassName("close-modal")[0];
-        if (span) {
-            span.onclick = function() { 
-                modal.style.display = "none";
-            }
-        }
-
-        modal.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-    }
+    }, { root: null, rootMargin: '0px', threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
 });
