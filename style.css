@@ -619,3 +619,37 @@ section h3::after {
         width: 95%;
     }
 }
+/* =========================================
+   CORREÇÃO DAS SETAS NO CELULAR (CARROSSEL DE PRODUTOS)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Estilo do botão (círculo branco) */
+    .myProductsSwiper .swiper-button-next,
+    .myProductsSwiper .swiper-button-prev {
+        display: flex !important; /* Força a aparecer */
+        width: 40px !important;   /* Tamanho do botão */
+        height: 40px !important;
+        background-color: rgba(255, 255, 255, 0.9); /* Fundo branco quase sólido */
+        border-radius: 50%;       /* Deixa redondo */
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3); /* Sombra para destacar do fundo */
+        z-index: 50;              /* Garante que fique por cima da foto */
+        top: 50%;                 /* Centraliza na altura */
+        margin-top: -20px;
+    }
+
+    /* Ajuste da posição horizontal */
+    .myProductsSwiper .swiper-button-prev {
+        left: 5px !important; /* Descola um pouco da esquerda */
+    }
+    .myProductsSwiper .swiper-button-next {
+        right: 5px !important; /* Descola um pouco da direita */
+    }
+
+    /* Estilo do ícone da seta (>) */
+    .myProductsSwiper .swiper-button-next::after,
+    .myProductsSwiper .swiper-button-prev::after {
+        font-size: 18px !important; /* Tamanho do ícone */
+        font-weight: bold;
+        color: #2C3E50; /* Cor azul escura para contraste */
+    }
+}
