@@ -14,6 +14,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <style>
+        /* =========================================
+           ESTILOS ADICIONAIS (INTERNOS)
+           ========================================= */
+
         /* Estilos da Seção de Agendamento */
         .system-highlight {
             background-color: #f0f8ff;
@@ -136,6 +140,91 @@
             background-color: #ccc;
             cursor: not-allowed;
         }
+
+        /* =========================================
+           NOVO ESTILO: DIFERENCIAIS TECH (2x2)
+           ========================================= */
+        .why-choose-section {
+            background-color: var(--bg-body, #0f172a); 
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-top: -30px; /* Puxa para perto do título */
+            margin-bottom: 50px;
+        }
+
+        .highlight-orange {
+            color: #FF6600; 
+            font-weight: 800;
+        }
+
+        /* Grid Flexível (Adapta para 2 colunas) */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 0 10px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* O Cartão Tech */
+        .tech-card {
+            background: var(--bg-surface, #1e293b); 
+            padding: 30px;
+            border-radius: 8px; /* Cantos menos arredondados = mais sério */
+            border-left: 5px solid #FF6600; /* Detalhe laranja lateral */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            
+            display: flex; /* Ícone ao lado do texto */
+            align-items: center;
+            gap: 20px;
+            text-align: left; /* Texto alinhado à esquerda */
+            
+            transition: transform 0.3s ease, background 0.3s;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            background: #263345; /* Clareia levemente no hover */
+        }
+
+        /* Ícone */
+        .tech-icon {
+            font-size: 2.2rem;
+            color: #FF6600;
+            min-width: 60px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Texto */
+        .tech-text h4 {
+            color: #fff; /* Título branco */
+            margin: 0 0 5px 0;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .tech-text span {
+            color: #94a3b8; /* Texto cinza claro */
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        /* Responsividade para Celular */
+        @media (max-width: 768px) {
+            .tech-grid {
+                grid-template-columns: 1fr; /* Uma coluna só */
+            }
+            .tech-card {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -153,7 +242,6 @@
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#agendamento" style="color: #0056b3; font-weight: bold;">Agendar Online</a></li>
                     <li><a href="#vendas">Vendas</a></li>
-                    
                 </ul>
             </nav>
         </div>
@@ -381,6 +469,76 @@
         </div>
     </section>
 
+    <section id="diferenciais" class="why-choose-section animate-on-scroll">
+        <div class="container">
+            <h3>Por que a <span class="highlight-orange">HD Aquecedores?</span></h3>
+            <p class="section-subtitle">Excelência e transparência em cada atendimento.</p>
+            
+            <div class="tech-grid">
+                
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="tech-text">
+                        <h4>Anos de Experiência</h4>
+                        <span>Tradição e confiança no mercado</span>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="tech-text">
+                        <h4>Técnicos Especializados</h4>
+                        <span>Equipe treinada e certificada</span>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <div class="tech-text">
+                        <h4>Taxa de Visita Grátis</h4>
+                        <span>Sem custos surpresa para você</span>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="tech-text">
+                        <h4>Orçamento Transparente</h4>
+                        <span>Sem compromisso e na hora</span>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="tech-text">
+                        <h4>Peças Originais</h4>
+                        <span>Segurança e durabilidade garantida</span>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <div class="tech-text">
+                        <h4>Garantia no Serviço</h4>
+                        <span>Confiança de um trabalho bem feito</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <section id="marcas" class="brands-section animate-on-scroll" style="animation-delay: 0.4s;">
         <div class="container">
             <h3>Assistência Técnica e Conserto para Todas as Marcas de Aquecedores em SBC</h3>
@@ -425,39 +583,39 @@
         </div>
     </section>
 
- <section id="contato" class="contact-section animate-on-scroll">
-    <div class="container">
-        <div class="logo-destaque-container">
-            <img src="imagens/00001.png" alt="Logo HD Aquecedores" class="logo-destaque">
-        </div>
-        
-        <h3>Fale Conosco para Atendimento em São Paulo</h3>
-        <p>Solicite seu orçamento ou atendimento técnico especializado.</p>
-        
-        <div class="phone-highlight-box">
-            <i class="fas fa-phone-volume"></i> 
-            <a href="tel:+5511986826712">(11) 98682-6712</a>
-        </div>
-        
-        <div class="social-icons-row">
+    <section id="contato" class="contact-section animate-on-scroll">
+        <div class="container">
+            <div class="logo-destaque-container">
+                <img src="imagens/00001.png" alt="Logo HD Aquecedores" class="logo-destaque">
+            </div>
             
-            <a href="mailto:Aquecedoreshd@gmail.com" class="social-btn email-btn" title="Mandar E-mail">
-                <i class="fas fa-envelope"></i>
-            </a>
+            <h3>Fale Conosco para Atendimento em São Paulo</h3>
+            <p>Solicite seu orçamento ou atendimento técnico especializado.</p>
+            
+            <div class="phone-highlight-box">
+                <i class="fas fa-phone-volume"></i> 
+                <a href="tel:+5511986826712">(11) 98682-6712</a>
+            </div>
+            
+            <div class="social-icons-row">
+                
+                <a href="mailto:Aquecedoreshd@gmail.com" class="social-btn email-btn" title="Mandar E-mail">
+                    <i class="fas fa-envelope"></i>
+                </a>
 
-            <a href="https://www.instagram.com/hdaquecedores" target="_blank" class="social-btn insta-btn" title="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
+                <a href="https://www.instagram.com/hdaquecedores" target="_blank" class="social-btn insta-btn" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
 
-            <a href="https://www.facebook.com/hdaquecedores" target="_blank" class="social-btn face-btn" title="Facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
+                <a href="https://www.facebook.com/hdaquecedores" target="_blank" class="social-btn face-btn" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
 
+            </div>
+
+            <p class="horario-text">Horário de Funcionamento: Atendimento 24 horas para emergências.</p>
         </div>
-
-        <p class="horario-text">Horário de Funcionamento: Atendimento 24 horas para emergências.</p>
-    </div>
-</section>
+    </section>
 
     <footer class="main-footer">
         <div class="container">
