@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Conserto de Aquecedores em São Paulo (Capital) | HD AQUECEDORES - Todas as Zonas</title>
+    <title>Conserto de Aquecedores em São Paulo (Capital) | Zonas Sul, Leste, Oeste e Norte - HD AQUECEDORES</title>
     
-    <meta name="description" content="Técnico de aquecedor a gás em São Paulo? Atendemos Zona Sul, Norte, Leste e Oeste. Manutenção Rinnai, Lorenzetti e Bosch. Visita Grátis e Desconto para Condomínios!">
+    <meta name="description" content="Assistência Técnica de Aquecedores em São Paulo. Chegada rápida (Moto-Técnicos) na Zona Sul, Norte, Leste e Oeste. Autorizada Rinnai, Lorenzetti e Bosch. Visita Grátis.">
 
     <link rel="canonical" href="https://hdaquecedores.com.br/aquecedores-sp.html" />
 
@@ -15,10 +15,10 @@
     <link rel="icon" href="imagens/00001.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <meta property="og:title" content="HD AQUECEDORES | Assistência Técnica SP Capital">
-    <meta property="og:description" content="Precisa de técnico em SP? Chegamos rápido na Zona Sul, Leste, Oeste e Norte. Descontos especiais para prédios e síndicos.">
+    <meta property="og:title" content="HD AQUECEDORES | Líder em São Paulo Capital">
+    <meta property="og:description" content="Técnicos em toda SP. Zona Sul, Leste, Oeste e Norte. Atendimento rápido para Rinnai, Lorenzetti e Bosch.">
     <meta property="og:image" content="https://hdaquecedores.com.br/imagens/00001.png">
-    <meta property="og:url" content="https://hdaquecedores.com.br/aquecedores-sp.html"> 
+    <meta property="og:url" content="https://hdaquecedores.com.br/aquecedores-sp.html">
     <meta property="og:type" content="website">
 
     <script type="application/ld+json">
@@ -31,7 +31,7 @@
         "logo": "https://hdaquecedores.com.br/imagens/00001.png",
         "telephone": "+5511986826712",
         "priceRange": "$$",
-        "description": "Manutenção de aquecedores a gás em todas as regiões de São Paulo: Zona Sul, Leste, Oeste, Norte e Centro.",
+        "description": "Manutenção, venda e instalação de aquecedores a gás em todas as zonas de São Paulo com frota rápida.",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "São Paulo",
@@ -39,80 +39,117 @@
           "addressCountry": "BR"
         },
         "areaServed": [
-            "São Paulo", "Zona Sul de São Paulo", "Zona Norte de São Paulo", "Zona Leste de São Paulo", "Zona Oeste de São Paulo", "Centro de São Paulo", "Morumbi", "Moema", "Tatuapé", "Perdizes", "Santana"
+            "São Paulo", "Zona Sul de São Paulo", "Zona Norte de São Paulo", "Zona Leste de São Paulo", "Zona Oeste de São Paulo", "Centro de São Paulo",
+            "Moema", "Morumbi", "Perdizes", "Tatuapé", "Santana", "Pinheiros", "Vila Mariana"
         ],
         "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "00:00",
-            "closes": "23:59"
-          }
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" }
         ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{
-          "@type": "Question",
-          "name": "Vocês atendem em todas as zonas de SP?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim, possuímos unidades móveis espalhadas pela Zona Sul, Norte, Leste, Oeste e Centro para garantir atendimento rápido mesmo com trânsito."
-          }
-        }, {
-          "@type": "Question",
-          "name": "Existe desconto para condomínios em SP?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim! Oferecemos planos especiais e descontos progressivos para manutenção coletiva em condomínios de São Paulo."
-          }
-        }]
       }
     ]
     </script>
-
+    
     <style>
-        /* Breadcrumbs */
-        .breadcrumbs { background: #f4f4f4; padding: 10px 0; font-size: 0.9rem; color: #555; }
-        .breadcrumbs a { color: #003366; text-decoration: none; }
+        /* --- ESTILOS GERAIS --- */
+        :root { --primary-blue: #003366; --primary-orange: #FF7733; --light-gray: #f4f4f4; --success-green: #25D366; }
+        .breadcrumbs { background: var(--light-gray); padding: 10px 0; font-size: 0.9rem; color: #555; }
+        .breadcrumbs a { color: var(--primary-blue); text-decoration: none; }
+        .section-title { text-align: center; color: var(--primary-blue); font-size: 2.2rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; }
+        .section-subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .highlight-orange { color: var(--primary-orange); }
         
-        /* Grid de Zonas */
-        .zone-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
-        .zone-card { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-top: 3px solid #003366; }
-        .zone-card h4 { color: #003366; margin-bottom: 10px; font-size: 1.1rem; }
+        /* Trust Bar SP */
+        .trust-bar { background: var(--primary-blue); color: white; padding: 15px 0; border-bottom: 3px solid var(--primary-orange); }
+        .trust-grid { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; }
+        .trust-item { flex: 1; min-width: 200px; margin: 5px 0; font-weight: 500; font-size: 0.95rem; }
+        .trust-item i { color: var(--primary-orange); margin-right: 8px; }
+
+        /* --- LOGÍSTICA SP (Novo) --- */
+        .logistics-section { background: #fff; padding: 50px 0; }
+        .logistics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: center; }
+        .logistics-card { background: #f9f9f9; padding: 25px; border-radius: 12px; border: 1px solid #eee; transition: 0.3s; }
+        .logistics-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: var(--primary-blue); }
+        .logistics-icon { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px; }
+        .logistics-card h4 { font-weight: bold; margin-bottom: 10px; color: #333; }
+        .logistics-card p { font-size: 0.9rem; color: #666; }
+
+        /* --- ZONAS DE SP (Visual) --- */
+        .zones-section { padding: 60px 0; background: #eef2f6; }
+        .zones-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .zone-card { background: #fff; padding: 20px; border-radius: 10px; text-align: left; border-left: 4px solid var(--primary-orange); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .zone-card h4 { color: var(--primary-blue); margin-bottom: 10px; font-weight: 800; display: flex; align-items: center; }
+        .zone-card h4 i { margin-right: 10px; font-size: 1.1rem; }
         .zone-card ul { list-style: none; padding: 0; }
-        .zone-card li { font-size: 0.9rem; color: #555; margin-bottom: 5px; }
-        .zone-card li::before { content: "• "; color: #FF7733; }
+        .zone-card li { font-size: 0.85rem; color: #555; margin-bottom: 5px; border-bottom: 1px dashed #eee; padding-bottom: 3px; }
 
-        /* DESTAQUE SÍNDICO (Novo) */
-        .syndic-banner {
-            background: linear-gradient(135deg, #003366 0%, #00509e 100%);
-            color: white;
-            padding: 40px 0;
-            margin: 30px 0;
-            border-radius: 0;
-            text-align: center;
-        }
-        .syndic-box {
-            border: 2px dashed #FF7733;
-            padding: 20px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .syndic-title { font-size: 1.8rem; font-weight: bold; margin-bottom: 10px; color: #fff; }
-        .syndic-text { font-size: 1.1rem; margin-bottom: 20px; }
-        .btn-syndic {
-            background-color: #FF7733; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block;
-        }
-        .btn-syndic:hover { background-color: #e65c00; transform: scale(1.05); }
+        /* --- DIAGNÓSTICO (Premium) --- */
+        .diagnostic-section { padding: 60px 0; background: #fff; }
+        .symptom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        details.symptom-box { background: #fff; border: 2px solid #eee; border-radius: 15px; overflow: hidden; transition: all 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        details.symptom-box:hover { border-color: var(--primary-blue); }
+        details.symptom-box[open] { border-color: var(--primary-orange); box-shadow: 0 10px 25px rgba(255, 119, 51, 0.15); }
+        summary.symptom-header { padding: 25px; cursor: pointer; font-weight: bold; color: var(--primary-blue); font-size: 1.1rem; display: flex; align-items: center; justify-content: space-between; list-style: none; }
+        summary.symptom-header::-webkit-details-marker { display: none; }
+        summary.symptom-header::after { content: '+'; font-size: 1.8rem; color: var(--primary-orange); transition: 0.3s; }
+        details.symptom-box[open] summary.symptom-header::after { content: '-'; transform: rotate(180deg); }
+        summary.symptom-header i { margin-right: 15px; font-size: 2rem; width: 40px; text-align: center; }
+        /* Cores Ícones */
+        .icon-orange { color: var(--primary-orange); } .icon-blue { color: var(--primary-blue); } .icon-red { color: #d9534f; }
+        .diagnosis-result { padding: 0 25px 25px; background: #fff; animation: fadeIn 0.4s ease; }
+        .diagnosis-result h5 { color: #333; margin-bottom: 10px; font-weight: 800; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .btn-diagnostic { display: block; width: 100%; padding: 15px; background: var(--primary-blue); color: white; text-align: center; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-diagnostic:hover { background: var(--primary-orange); }
 
-        /* FAQ & Map */
-        .faq-details { background: #fff; border-bottom: 1px solid #ddd; padding: 15px; cursor: pointer; }
-        .faq-details summary { font-weight: bold; color: #003366; }
-        .map-container iframe { width: 100%; height: 350px; border: 0; border-radius: 8px; }
+        /* --- COMPARATIVO --- */
+        .comparison-section { padding: 60px 0; background: #1a2b4a; color: white; }
+        .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .comparison-card { padding: 40px; border-radius: 20px; }
+        .comparison-fix { background: #e6f7ff; color: #333; border: 4px solid #2196F3; }
+        .comparison-replace { background: #fff3e0; color: #333; border: 4px solid #FF9800; }
+        .comparison-card h4 { font-size: 1.6rem; margin-bottom: 25px; text-align: center; font-weight: 800; }
+        .comparison-fix h4 { color: #0056b3; } .comparison-replace h4 { color: #e65100; }
+        .comparison-card li { display: flex; margin-bottom: 15px; font-size: 1rem; }
+        .comparison-card li i { margin-right: 10px; font-size: 1.2rem; margin-top: 3px; }
+        .comparison-fix li i { color: #2196F3; } .comparison-replace li i { color: #FF9800; }
+        .result-text { text-align: center; margin-top: 20px; font-weight: bold; font-size: 1.1rem; }
+        .cta-comparison { text-align: center; margin-top: 40px; }
+        .btn-green-cta { background: #25D366; color: white; padding: 18px 40px; border-radius: 50px; font-size: 1.2rem; font-weight: bold; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s; display: inline-block; }
+        .btn-green-cta:hover { transform: scale(1.05); background: #128C7E; }
+
+        /* --- SÍNDICO BANNER (Foco SP) --- */
+        .syndic-banner { background: #003366; padding: 60px 0; margin: 30px 0; text-align: center; border-top: 5px solid var(--primary-orange); }
+        .syndic-box { border: 2px dashed var(--primary-orange); border-radius: 20px; padding: 40px; max-width: 900px; margin: 0 auto; background: rgba(255,255,255,0.05); }
+        .syndic-title { color: white; font-size: 2.2rem; font-weight: 800; text-transform: uppercase; margin-bottom: 15px; }
+        .syndic-text { color: #ddd; font-size: 1.2rem; margin-bottom: 30px; line-height: 1.6; }
+        .btn-orange-cta { background: var(--primary-orange); color: white; padding: 15px 35px; border-radius: 50px; font-weight: bold; text-decoration: none; font-size: 1.1rem; transition: 0.3s; display: inline-block; }
+        .btn-orange-cta:hover { background: #e65c00; transform: scale(1.05); }
+
+        /* --- VENDAS & OUTROS --- */
+        .sales-section { background-color: #f9f9f9; padding: 60px 0; border-top: 5px solid var(--primary-blue); }
+        .product-card { background: white; border: 1px solid #eee; border-radius: 10px; padding: 20px; text-align: center; transition: 0.3s; height: auto; }
+        .product-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-color: var(--primary-orange); }
+        .product-image { width: 100%; height: 220px; object-fit: contain; margin-bottom: 15px; }
+        .product-info h4 { color: var(--primary-blue); font-size: 1.1rem; margin-bottom: 5px; }
+        .btn-product-whatsapp { background: #25D366; color: white; padding: 10px; display: block; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 10px; }
+        .sales-call-to-action { background: var(--primary-blue); color: white; padding: 30px; border-radius: 15px; margin-top: 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .btn-cta-catalogo { background: var(--primary-orange); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+
+        /* Swiper Fix */
+        .swiper { width: 100%; padding-bottom: 40px !important; }
+        .standard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .standard-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 5px solid var(--primary-orange); }
+        .standard-icon { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px; }
+        .check-list-robust li { margin-bottom: 10px; display: flex; align-items: center; }
+        .check-list-robust li i { color: #27ae60; margin-right: 10px; }
+        .faq-details { background: #fff; border-bottom: 1px solid #ddd; padding: 20px; cursor: pointer; }
+        .map-container iframe { width: 100%; height: 450px; border: 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+        @media (max-width: 768px) {
+            .comparison-grid, .challenges-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.6rem; }
+            .sales-call-to-action { flex-direction: column; text-align: center; }
+            .trust-grid { flex-direction: column; text-align: left; padding: 0 20px; }
+        }
     </style>
 </head>
 <body>
@@ -121,14 +158,15 @@
         <div class="container">
             <h1 class="logo">
                 <a href="/" class="logo-link">
-                    <img src="imagens/00001.png" alt="HD Aquecedores SP" class="header-logo-img">
+                    <img src="imagens/00001.png" alt="HD Aquecedores São Paulo SP" class="header-logo-img">
                 </a>
             </h1>
             <nav class="main-nav">
                 <ul>
+                    <li><a href="#diagnostico" style="color: var(--primary-orange); font-weight: bold;">Diagnóstico</a></li>
+                    <li><a href="#vendas" style="color: var(--success-green); font-weight: bold;">Loja</a></li>
+                    <li><a href="#zonas">Zonas de SP</a></li>
                     <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#condominios" style="color: #FF7733; font-weight: bold;">Para Condomínios</a></li> <li><a href="#zonas">Regiões</a></li>
-                    <li><a href="#galeria-servicos">Fotos</a></li> 
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -139,228 +177,384 @@
         <div class="container">
             <a href="/">Home</a> <span>></span> 
             <a href="#">Áreas de Atendimento</a> <span>></span> 
-            <strong>São Paulo Capital</strong>
+            <strong>São Paulo (Capital)</strong>
         </div>
     </div>
 
     <section class="hero-banner">
         <div class="container">
-            <h2>Assistência Técnica de Aquecedores em São Paulo (Capital)</h2>
-
+            <h2>Assistência Técnica de Aquecedores em São Paulo</h2>
             <p class="hero-highlight-text animate-on-scroll" style="animation-delay: 0.6s;">
-                Zona Sul, Norte, Leste, Oeste e Centro.<br>
-                ✅ <strong>VISITA GRÁTIS EM SP!</strong> Equipes móveis para atendimento rápido no trânsito da capital.
+                Zona Sul, Norte, Leste, Oeste e Centro. <br>
+                <strong>Unidades Móveis</strong> para driblar o trânsito e chegar rápido. <strong>Visita Grátis em SP!</strong>
             </p>
-
             <div class="hero-buttons-group">
-                <a href="https://wa.me/5511986826712?text=Olá%21%20Sou%20de%20São%20Paulo%20Capital%20e%20preciso%20de%20um%20orçamento." target="_blank" class="btn-primary-whatsapp animate-on-scroll" style="animation-delay: 0.8s;">
-                    <i class="fab fa-whatsapp"></i> WhatsApp São Paulo
+                <a href="https://wa.me/5511986826712?text=Olá%21%20Estou%20em%20São%20Paulo%20e%20preciso%20de%20um%20técnico%20urgente." target="_blank" class="btn-primary-whatsapp animate-on-scroll" style="animation-delay: 0.8s;">
+                    <i class="fab fa-whatsapp"></i> Chamar Técnico (Plantão SP)
                 </a>
                 <a href="tel:+5511986826712" class="btn-primary-call animate-on-scroll" style="animation-delay: 1s;">Ligue Agora: (11) 98682-6712</a>
             </div>
         </div>
     </section>
 
-    <section id="condominios" class="syndic-banner animate-on-scroll">
+    <div class="trust-bar animate-on-scroll">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item"><i class="fas fa-motorcycle"></i> <strong>Moto-Técnicos</strong> (Sem trânsito)</div>
+                <div class="trust-item"><i class="fas fa-clock"></i> Atendimento 24h: <strong>Todas as Zonas</strong></div>
+                <div class="trust-item"><i class="fas fa-star"></i> Avaliação: <strong>4.9/5.0 Estrelas</strong></div>
+                <div class="trust-item"><i class="fas fa-shield-alt"></i> Peças: <strong>Originais de Fábrica</strong></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="logistics-section">
+        <div class="container">
+            <h3 class="section-title">Como atendemos São Paulo <span class="highlight-orange">Tão Rápido?</span></h3>
+            <p class="section-subtitle">Sabemos que SP para. Por isso, desenvolvemos uma logística exclusiva para não te deixar no banho frio.</p>
+            <div class="logistics-grid">
+                <div class="logistics-card">
+                    <i class="fas fa-map-marked-alt logistics-icon"></i>
+                    <h4>Bases Estratégicas</h4>
+                    <p>Técnicos posicionados próximos às Marginais (Pinheiros/Tietê) e Av. 23 de Maio para deslocamento ágil.</p>
+                </div>
+                <div class="logistics-card">
+                    <i class="fas fa-motorcycle logistics-icon"></i>
+                    <h4>Frota Ágil</h4>
+                    <p>Atendimentos de urgência realizados por motos equipadas com kits de reparo rápido.</p>
+                </div>
+                <div class="logistics-card">
+                    <i class="fas fa-box-open logistics-icon"></i>
+                    <h4>Estoque Volante</h4>
+                    <p>Nossos veículos carregam as principais peças (placas, ventoinhas) para consertar na primeira visita.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="zonas" class="zones-section">
+        <div class="container">
+            <h3 class="section-title">Cobertura Total na Capital</h3>
+            <div class="zones-grid">
+                <div class="zone-card">
+                    <h4><i class="fas fa-map-marker-alt"></i> Zona Sul</h4>
+                    <ul><li>Moema / Vila Nova Conceição</li><li>Morumbi / Panamby</li><li>Vila Mariana / Saúde</li><li>Itaim Bibi / Jardins</li><li>Santo Amaro / Brooklin</li></ul>
+                </div>
+                <div class="zone-card">
+                    <h4><i class="fas fa-map-marker-alt"></i> Zona Oeste</h4>
+                    <ul><li>Pinheiros / Vila Madalena</li><li>Perdizes / Pompéia</li><li>Lapa / Alto da Lapa</li><li>Butantã / Jaguaré</li><li>Barra Funda</li></ul>
+                </div>
+                <div class="zone-card">
+                    <h4><i class="fas fa-map-marker-alt"></i> Zona Leste</h4>
+                    <ul><li>Tatuapé / Anália Franco</li><li>Mooca / Belém</li><li>Vila Prudente</li><li>Penha</li><li>Ipiranga</li></ul>
+                </div>
+                <div class="zone-card">
+                    <h4><i class="fas fa-map-marker-alt"></i> Zona Norte/Centro</h4>
+                    <ul><li>Santana / Tucuruvi</li><li>Casa Verde</li><li>Higienópolis</li><li>Bela Vista / Consolação</li><li>Santa Cecília</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diagnostico" class="diagnostic-section">
+        <div class="container diagnostic-container">
+            <h3 class="section-title">Diagnóstico Rápido: <span class="highlight-orange">O que está acontecendo?</span></h3>
+            <p class="section-subtitle">Identifique o problema e receba uma solução imediata da nossa equipe em SP:</p>
+
+            <div class="symptom-grid">
+                <details class="symptom-box">
+                    <summary class="symptom-header"><i class="fas fa-shower icon-orange"></i> Água não esquenta</summary>
+                    <div class="diagnosis-result">
+                        <h5>Causas Prováveis:</h5><ul><li>Piloto/Ignição falhando.</li><li>Gás cortado (Comgás) ou registro fechado.</li><li>Baixa pressão.</li></ul>
+                        <h5>Solução HD:</h5><p>Check-up completo. Resolvemos na hora.</p>
+                        <a href="https://wa.me/5511986826712?text=Problema:%20Água%20não%20esquenta%20SP." class="btn-diagnostic">Solicitar Reparo</a>
+                    </div>
+                </details>
+                <details class="symptom-box">
+                    <summary class="symptom-header"><i class="fas fa-power-off icon-orange"></i> Desliga sozinho</summary>
+                    <div class="diagnosis-result">
+                        <h5>Causas Prováveis:</h5><ul><li>Sensor de superaquecimento.</li><li>Exaustão ruim (Ninhos na chaminé).</li><li>Vento apagando a chama.</li></ul>
+                        <h5>Solução HD:</h5><p>Limpeza de sensores e verificação de segurança.</p>
+                        <a href="https://wa.me/5511986826712?text=Problema:%20Desligando%20sozinho%20SP." class="btn-diagnostic">Agendar Verificação</a>
+                    </div>
+                </details>
+                <details class="symptom-box">
+                    <summary class="symptom-header"><i class="fas fa-exclamation-circle icon-orange"></i> Código de Erro</summary>
+                    <div class="diagnosis-result">
+                        <h5>Significado:</h5><p>O aparelho detectou falha. E1/E10 (Gás), E90 (Exaustão), etc.</p>
+                        <h5>Solução HD:</h5><p>Reset e correção da placa eletrônica.</p>
+                        <a href="https://wa.me/5511986826712?text=Problema:%20Código%20de%20Erro%20SP." class="btn-diagnostic">Informar Código</a>
+                    </div>
+                </details>
+                <details class="symptom-box" style="border-color: #ffcccc;">
+                    <summary class="symptom-header"><i class="fas fa-fire-alt icon-red"></i> Cheiro de Gás</summary>
+                    <div class="diagnosis-result" style="background: #fff0f0;">
+                        <h5 style="color: #d9534f;">PERIGO:</h5><p>Feche o registro e abra janelas. Risco de explosão ou intoxicação.</p>
+                        <a href="https://wa.me/5511986826712?text=URGENTE:%20Cheiro%20de%20Gás%20SP." class="btn-diagnostic" style="background: #d9534f;">Emergência SP</a>
+                    </div>
+                </details>
+                <details class="symptom-box">
+                    <summary class="symptom-header"><i class="fas fa-volume-up icon-blue"></i> Barulhos / Vibração</summary>
+                    <div class="diagnosis-result">
+                        <h5>Causas:</h5><p>Ventoinha suja ou excesso de pressão de água.</p>
+                        <h5>Solução HD:</h5><p>Lubrificação e ajuste hidráulico.</p>
+                        <a href="https://wa.me/5511986826712?text=Problema:%20Barulho%20no%20aquecedor%20SP." class="btn-diagnostic">Solicitar Avaliação</a>
+                    </div>
+                </details>
+                <details class="symptom-box">
+                    <summary class="symptom-header"><i class="fas fa-burn icon-orange"></i> Chama Amarela</summary>
+                    <div class="diagnosis-result">
+                        <h5>Risco:</h5><p>Queima incompleta gerando fuligem e monóxido de carbono.</p>
+                        <h5>Solução HD:</h5><p>Limpeza química urgente.</p>
+                        <a href="https://wa.me/5511986826712?text=Problema:%20Chama%20amarela%20SP." class="btn-diagnostic">Agendar Limpeza</a>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="condominios-sp" class="syndic-banner animate-on-scroll">
         <div class="container">
             <div class="syndic-box">
-                <i class="fas fa-building" style="font-size: 40px; color: #FF7733; margin-bottom: 10px;"></i>
-                <h3 class="syndic-title">ATENÇÃO SÍNDICOS E ADMINISTRADORAS DE SP</h3>
-                <p class="syndic-text">Gerencia um condomínio em São Paulo? Temos planos de manutenção preventiva coletiva com <strong>Descontos Progressivos</strong>. Garanta a segurança do gás e economize.</p>
-                <a href="https://wa.me/5511986826712?text=Olá%21%20Sou%20síndico%20em%20SP%20e%20quero%20saber%20sobre%20o%20plano%20para%20condomínios." class="btn-syndic">
-                    <i class="fas fa-file-contract"></i> Solicitar Proposta para Condomínio
+                <i class="fas fa-building" style="font-size: 50px; color: #FF7733; margin-bottom: 20px;"></i>
+                <h3 class="syndic-title">ATENÇÃO SÍNDICOS DE SÃO PAULO</h3>
+                <p class="syndic-text">
+                    Seu condomínio está em dia com a vistoria do <strong>Corpo de Bombeiros (AVCB)</strong>? <br>
+                    Realizamos Laudo Técnico e Manutenção Preventiva Coletiva com <strong>Descontos Progressivos</strong>. Evite cortes da Comgás.
+                </p>
+                <a href="https://wa.me/5511986826712?text=Olá%21%20Sou%20síndico%20em%20SP%20e%20quero%20uma%20proposta." class="btn-orange-cta" target="_blank">
+                    <i class="fas fa-file-signature"></i> Solicitar Orçamento Coletivo
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="servicos" class="services-section animate-on-scroll" style="animation-delay: 0.2s;">
+    <section id="comparativo" class="comparison-section">
         <div class="container">
-            <h3>SERVIÇOS DE AQUECEDORES A GÁS (SP CAPITAL)</h3>
-            <p>Atendemos toda a capital paulista com rapidez, peças originais e garantia:</p>
+            <h3 class="section-title" style="color:white;">Dúvida: <span class="highlight-orange">Consertar ou Trocar?</span></h3>
+            <p class="section-subtitle" style="color:#ccc;">Guia rápido para ajudar na sua decisão:</p>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card comparison-fix">
+                    <h4><i class="fas fa-wrench"></i> Quando CONSERTAR vale a pena</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Aparelho com menos de 8-10 anos.</li>
+                        <li><i class="fas fa-check-circle"></i> Custo do reparo < 40% de um novo.</li>
+                        <li><i class="fas fa-check-circle"></i> Peças originais acessíveis.</li>
+                    </ul>
+                    <p class="result-text" style="color: #0056b3;">Resultado: Economia imediata.</p>
+                </div>
+                <div class="comparison-card comparison-replace">
+                    <h4><i class="fas fa-sync-alt"></i> Quando TROCAR é melhor</h4>
+                    <ul>
+                        <li><i class="fas fa-times-circle"></i> Aparelho antigo (+12 anos) ou corrosão.</li>
+                        <li><i class="fas fa-times-circle"></i> Peças caras ou fora de linha.</li>
+                        <li><i class="fas fa-times-circle"></i> Deseja upgrade tecnológico (Digital).</li>
+                    </ul>
+                    <p class="result-text" style="color: #e65100;">Resultado: Eficiência e Segurança.</p>
+                </div>
+            </div>
+            <div class="cta-comparison">
+                <a href="https://wa.me/5511986826712?text=Olá%21%20Dúvida:%20Conserto%20ou%20Troco?" class="btn-green-cta">
+                    <i class="fab fa-whatsapp"></i> Avaliação Grátis em SP
+                </a>
+            </div>
+        </div>
+    </section>
 
-            <div class="swiper mySwiper">
+    <section id="vendas" class="sales-section animate-on-scroll">
+        <div class="container">
+            <h3>Loja de Aquecedores (Entrega SP Capital)</h3>
+            <p>Modelos ideais para a pressão de água e tipo de gás (GN/GLP) de São Paulo.</p>
+            
+            <div class="swiper myProductsSwiper" style="padding: 20px 10px 50px 10px;"> 
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="card">
-                            <h4>Manutenção Preventiva</h4>
-                            <p>Essencial para a segurança em apartamentos de SP. Limpeza e regulagem completa.</p>
+                        <div class="product-card">
+                            <img src="imagens/aq1.jpeg" alt="Rinnai 35L" class="product-image">
+                            <div class="product-info"><h4>Rinnai REU-E35 (35L)</h4><p>Digital. Top de linha para coberturas.</p></div>
+                            <a href="https://wa.me/5511986826712?text=Orçamento%20Rinnai%2035L%20SP" target="_blank" class="btn-product-whatsapp"><i class="fab fa-whatsapp"></i> Ver Preço</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card">
-                            <h4>Conserto Rápido (24h)</h4>
-                            <p>Banho gelado em SP? Não espere! Resolvemos problemas de vazamento e peças na hora.</p>
+                        <div class="product-card">
+                            <img src="imagens/aq2.jpeg" alt="Rinnai 15L" class="product-image">
+                            <div class="product-info"><h4>Rinnai 15L Digital</h4><p>O mais vendido em SP. Ideal para 2 banheiros.</p></div>
+                            <a href="https://wa.me/5511986826712?text=Orçamento%20Rinnai%2015L%20SP" target="_blank" class="btn-product-whatsapp"><i class="fab fa-whatsapp"></i> Ver Preço</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card">
-                            <h4>Instalação NBR 13103</h4>
-                            <p>Instalação de aquecedores em apartamentos novos e reformas em toda São Paulo.</p>
+                        <div class="product-card">
+                            <img src="imagens/loren.jpeg" alt="Lorenzetti 1600D" class="product-image">
+                            <div class="product-info"><h4>Lorenzetti 15L</h4><p>Melhor custo-benefício do mercado.</p></div>
+                            <a href="https://wa.me/5511986826712?text=Orçamento%20Lorenzetti%2015L%20SP" target="_blank" class="btn-product-whatsapp"><i class="fab fa-whatsapp"></i> Ver Preço</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card">
-                            <h4>Conversão GN / GLP</h4>
-                            <p>Mudou de prédio em SP? Fazemos a conversão do seu aparelho para o gás encanado (Comgás).</p>
+                        <div class="product-card">
+                            <img src="imagens/aq3.jpeg" alt="Rinnai 21L" class="product-image">
+                            <div class="product-info"><h4>Rinnai 21L</h4><p>Para quem exige muito conforto.</p></div>
+                            <a href="https://wa.me/5511986826712?text=Orçamento%20Rinnai%2021L%20SP" target="_blank" class="btn-product-whatsapp"><i class="fab fa-whatsapp"></i> Ver Preço</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="imagens/WhatsApp Image 2025-11-19 at 20.07.38.jpeg" alt="Rheem 26L" class="product-image">
+                            <div class="product-info"><h4>Rheem 26L</h4><p>Padrão Japonês de durabilidade.</p></div>
+                            <a href="https://wa.me/5511986826712?text=Orçamento%20Rheem%2026L%20SP" target="_blank" class="btn-product-whatsapp"><i class="fab fa-whatsapp"></i> Ver Preço</a>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div><div class="swiper-button-prev"></div><div class="swiper-pagination"></div>
             </div>
-        </div>
-    </section>
-
-    <section id="zonas" class="neighborhood-section" style="padding: 50px 0; background-color: #fff;">
-        <div class="container">
-            <h3 style="text-align: center; color: #003366;">REGIÕES DE ATENDIMENTO EM SÃO PAULO</h3>
-            <p style="text-align: center;">Nossas motos chegam rápido em qualquer zona da capital:</p>
             
-            <div class="zone-grid">
-                <div class="zone-card">
-                    <h4><i class="fas fa-map-marker-alt"></i> Zona Sul</h4>
-                    <ul>
-                        <li>Morumbi / Panamby</li>
-                        <li>Moema / Vila Nova Conceição</li>
-                        <li>Vila Mariana / Saúde</li>
-                        <li>Itaim Bibi / Jardins</li>
-                        <li>Santo Amaro / Brooklin</li>
-                    </ul>
+            <div class="sales-call-to-action">
+                <div class="cta-content">
+                    <h4>Qual o tamanho ideal para meu apartamento?</h4>
+                    <p>Depende do número de chuveiros e da pressão do prédio. Fale com um técnico:</p>
                 </div>
-                <div class="zone-card">
-                    <h4><i class="fas fa-map-marker-alt"></i> Zona Oeste</h4>
-                    <ul>
-                        <li>Pinheiros / Vila Madalena</li>
-                        <li>Perdizes / Pompéia</li>
-                        <li>Lapa / Alto da Lapa</li>
-                        <li>Butantã / Jaguaré</li>
-                        <li>Barra Funda</li>
-                    </ul>
+                <a href="https://wa.me/5511986826712?text=Consultoria%20de%20Compra%20SP" class="btn-cta-catalogo">
+                    <i class="fab fa-whatsapp"></i> Consultoria Gratuita
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="padrao-hd" class="tech-standard-section">
+        <div class="container">
+            <h3 class="section-title">Segurança NBR 13103: <span class="highlight-orange">Padrão Ouro</span></h3>
+            <div class="standard-grid">
+                <div class="standard-card">
+                    <i class="fas fa-tools standard-icon"></i>
+                    <h4>1. Limpeza Técnica</h4>
+                    <ul class="check-list-robust"><li><i class="fas fa-check"></i> Queimadores e Injetores.</li><li><i class="fas fa-check"></i> Ventoinha e Permutador.</li></ul>
                 </div>
-                <div class="zone-card">
-                    <h4><i class="fas fa-map-marker-alt"></i> Zona Leste</h4>
-                    <ul>
-                        <li>Tatuapé / Anália Franco</li>
-                        <li>Mooca / Belém</li>
-                        <li>Vila Prudente</li>
-                        <li>Penha</li>
-                        <li>Ipiranga (Sul/Leste)</li>
-                    </ul>
+                <div class="standard-card">
+                    <i class="fas fa-shield-virus standard-icon"></i>
+                    <h4>2. Segurança Total</h4>
+                    <ul class="check-list-robust"><li><i class="fas fa-check"></i> Teste de vazamento de gás.</li><li><i class="fas fa-check"></i> Medição de Monóxido (CO).</li></ul>
                 </div>
-                <div class="zone-card">
-                    <h4><i class="fas fa-map-marker-alt"></i> Zona Norte/Centro</h4>
-                    <ul>
-                        <li>Santana / Tucuruvi</li>
-                        <li>Casa Verde</li>
-                        <li>Higienópolis</li>
-                        <li>Bela Vista / Consolação</li>
-                        <li>Santa Cecília</li>
-                    </ul>
+                <div class="standard-card">
+                    <i class="fas fa-sliders-h standard-icon"></i>
+                    <h4>3. Performance</h4>
+                    <ul class="check-list-robust"><li><i class="fas fa-check"></i> Ajuste de pressão dinâmica.</li><li><i class="fas fa-check"></i> Regulagem de temperatura.</li></ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="marcas" class="brands-section animate-on-scroll" style="animation-delay: 0.4s;">
+    <section id="servicos" class="services-section animate-on-scroll" style="padding: 60px 0;">
         <div class="container">
-            <h3>MARCAS ATENDIDAS EM SP</h3>
+            <h3 class="section-title" style="font-size: 1.5rem; margin-bottom: 30px;">Nossos Serviços em SP</h3>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="card"><h4>Manutenção Preventiva</h4><p>Evite acidentes e economize gás.</p></div></div>
+                    <div class="swiper-slide"><div class="card"><h4>Conserto Rápido</h4><p>Peças na hora para o banho voltar.</p></div></div>
+                    <div class="swiper-slide"><div class="card"><h4>Instalação NBR</h4><p>Segurança absoluta na instalação.</p></div></div>
+                    <div class="swiper-slide"><div class="card"><h4>Conversão GN/GLP</h4><p>Mudou de gás? Nós adaptamos.</p></div></div>
+                </div>
+                <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="marcas" class="brands-section animate-on-scroll" style="padding: 40px 0; background: #f4f4f4;">
+        <div class="container">
+            <h3 class="section-title" style="font-size: 1.5rem;">Marcas Autorizadas</h3>
             <div class="swiper myBrandsSwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="imagens/rinnai.png" alt="Rinnai SP"></div>
                     <div class="swiper-slide"><img src="imagens/consul1.png" alt="Consul SP"></div>
-                    <div class="swiper-slide"><img src="imagens/lorenzetti-logo-0.png" alt="Lorenzetti SP" class="lorenzetti-logo"></div>
+                    <div class="swiper-slide"><img src="imagens/lorenzetti-logo-0.png" alt="Lorenzetti SP"></div>
                     <div class="swiper-slide"><img src="imagens/bosh3.png" alt="Bosch SP"></div>
                     <div class="swiper-slide"><img src="imagens/eletrolux2.png" alt="Electrolux SP"></div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
-    <section id="faq" style="padding: 50px 0; background: #f4f4f4;">
+    <section id="contato" class="contact-section animate-on-scroll" style="padding: 60px 0;">
         <div class="container">
-            <h3 style="text-align: center; margin-bottom: 30px; color: #003366;">DÚVIDAS FREQUENTES (CAPITAL)</h3>
-            
-            <details class="faq-details">
-                <summary>Vocês cobram visita em São Paulo Capital?</summary>
-                <p>Para a grande maioria dos bairros de SP, a visita técnica para orçamento é <strong>gratuita</strong>. Consulte sua região pelo WhatsApp.</p>
-            </details>
-            
-            <details class="faq-details">
-                <summary>Como funciona o desconto para condomínios?</summary>
-                <p>Fechando um pacote para múltiplos apartamentos no mesmo prédio, oferecemos descontos progressivos na mão de obra.</p>
-            </details>
-
-            <details class="faq-details">
-                <summary>Atendem com hora marcada?</summary>
-                <p>Sim! Sabemos que a rotina em SP é corrida. Agendamos o melhor horário para você, inclusive aos sábados.</p>
-            </details>
-        </div>
-    </section>
-
-    <section id="galeria-servicos" class="gallery-section animate-on-scroll" style="animation-delay: 1s;">
-        <div class="container">
-            <h3>FOTOS DE SERVIÇOS EM SP</h3>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="imagens/instalaçao9.avif" alt="Instalação de aquecedor no Morumbi Zona Sul">
-                    <p class="image-caption">Instalação de Rinnai no Morumbi.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/instalaçao2.jpeg" alt="Manutenção preventiva aquecedor na Mooca">
-                    <p class="image-caption">Revisão completa na Mooca.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/instalaçao8.jpg" alt="Conserto de aquecedor em Pinheiros SP">
-                    <p class="image-caption">Reparo rápido em Pinheiros.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/instalaçao6.jpg" alt="Troca de aquecedor Tatuapé Zona Leste">
-                    <p class="image-caption">Troca de aparelho no Tatuapé.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato" class="contact-section animate-on-scroll" style="animation-delay: 1.2s;">
-        <div class="container">
-            <h3>Fale Conosco - Atendimento SP Capital</h3>
-            
-            <div class="map-container" style="margin-bottom: 20px;">
+            <h3 class="section-title">Agende sua Visita em SP</h3>
+            <div class="map-container" style="margin-bottom: 30px;">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.0488665793!2d-46.87549747514309!3d-23.68153144966373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2sS%C3%A3o%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1716300000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-
-            <p>Agende sua visita grátis agora:</p>
-            <p>Telefone: <a href="tel:+5511986826712"><strong>(11) 98682-6712</strong></a></p>
-            
-            <p><a href="mailto:Aquecedoreshd@gmail.com"><i class="fas fa-envelope" style="color: #FF7733;"></i> Aquecedoreshd@gmail.com</a></p>
-            <p><a href="https://www.instagram.com/hdaquecedores" target="_blank"><i class="fab fa-instagram" style="color: #E4405F;"></i> @hdaquecedores</a></p>
+            <div style="text-align: center;">
+                <a href="tel:+5511986826712" style="font-size: 1.5rem; color: var(--primary-blue); font-weight: bold; text-decoration: none;">
+                    <i class="fas fa-phone-alt animate-pulse"></i> (11) 98682-6712
+                </a>
+            </div>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <footer class="main-footer" style="background: var(--primary-blue); color: white; padding: 30px 0; text-align: center;">
         <div class="container">
-            <p>© 2024 HD AQUECEDORES. Referência em SP Capital e Grande ABC.</p>
-            <p style="font-size: 0.8rem; margin-top: 10px;">
-                <a href="/" style="color: #aaa;">Home</a> | 
-                <a href="aquecedores-santo-andre.html" style="color: #aaa;">Santo André</a> | 
-                <a href="aquecedores-sao-caetano.html" style="color: #aaa;">São Caetano</a> | 
-                <a href="aquecedores-sp.html" style="color: #fff;">São Paulo</a>
+            <p>© 2024 HD AQUECEDORES. A maior de São Paulo e ABC.</p>
+            <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.8;">
+                <a href="/" style="color: white; text-decoration: none;">Home</a> | 
+                <a href="aquecedores-santo-andre.html" style="color: white; text-decoration: none;">Santo André</a> | 
+                <a href="aquecedores-sao-caetano.html" style="color: white; text-decoration: none;">São Caetano</a> |
+                <a href="aquecedores-sp.html" style="color: var(--primary-orange); text-decoration: none;">São Paulo</a>
             </p>
         </div>
     </footer>
 
     <div class="floating-whatsapp">
-        <a href="https://wa.me/5511986826712?text=Olá%21%20Sou%20de%20SP%20e%20preciso%20de%20ajuda%20com%20meu%20aquecedor." target="_blank" aria-label="WhatsApp SP">
+        <a href="https://wa.me/5511986826712?text=Olá%21%20Gostaria%20de%20agendar%20uma%20visita%20em%20SP." target="_blank">
             <i class="fab fa-whatsapp" style="font-size: 34px; color: white;"></i>
         </a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const animatePulse = document.querySelector('.animate-pulse');
+            if(animatePulse) {
+                setInterval(() => {
+                    animatePulse.style.transform = 'scale(1.1)';
+                    setTimeout(() => { animatePulse.style.transform = 'scale(1)'; }, 500);
+                }, 2000);
+            }
+
+            // 1. CARROSSEL DE SERVIÇOS
+            if(document.querySelector('.mySwiper')) {
+                new Swiper(".mySwiper", {
+                    slidesPerView: 1, spaceBetween: 30,
+                    pagination: { el: ".swiper-pagination", clickable: true },
+                    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+                    breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+                });
+            }
+
+            // 2. CARROSSEL DE MARCAS
+            if(document.querySelector('.myBrandsSwiper')) {
+                new Swiper(".myBrandsSwiper", {
+                    slidesPerView: 2, spaceBetween: 20, loop: true,
+                    autoplay: { delay: 2500, disableOnInteraction: false },
+                    breakpoints: {
+                        640: { slidesPerView: 3, spaceBetween: 30 },
+                        768: { slidesPerView: 4, spaceBetween: 40 },
+                        1024: { slidesPerView: 5, spaceBetween: 50 },
+                    },
+                });
+            }
+
+            // 3. CARROSSEL DE PRODUTOS
+            if(document.querySelector('.myProductsSwiper')) {
+                new Swiper(".myProductsSwiper", {
+                    slidesPerView: 1, spaceBetween: 15,
+                    pagination: { el: ".swiper-pagination", clickable: true },
+                    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+                    breakpoints: {
+                        640: { slidesPerView: 2, spaceBetween: 20 },
+                        768: { slidesPerView: 3, spaceBetween: 30 },
+                        1024: { slidesPerView: 4, spaceBetween: 30 },
+                    },
+                });
+            }
+        });
+    </script>
 </body>
 </html>
