@@ -768,3 +768,59 @@ section h3::after {
     opacity: 0.7;
     margin-top: 20px;
 }
+/* --- BLOCO DESTAQUE SÍNDICO (Adicionar ao style.css) --- */
+.syndic-banner {
+    background: linear-gradient(135deg, #003366 0%, #00509e 100%);
+    color: white;
+    padding: 40px 0;
+    margin: 30px 0; /* Espaçamento para não grudar nas outras seções */
+    border-radius: 0;
+    text-align: center;
+}
+
+.syndic-box {
+    border: 2px dashed #FF7733; /* Borda tracejada laranja */
+    padding: 25px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.syndic-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.syndic-text {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.btn-syndic {
+    background-color: #FF7733;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+.btn-syndic:hover {
+    background-color: #e65c00;
+    transform: scale(1.05); /* Efeito de crescer ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Ajuste para celular */
+@media (max-width: 768px) {
+    .syndic-title { font-size: 1.4rem; }
+    .syndic-text { font-size: 1rem; }
+}
