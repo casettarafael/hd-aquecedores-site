@@ -311,6 +311,66 @@
         .ai-input-area input:focus { border-color: #0056b3; }
         .ai-input-area button { background: #0056b3; color: white; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; }
         .ai-input-area button:hover { background: #004494; transform: scale(1.05); }
+
+        /* =========================================
+           NOVAS FUNCIONALIDADES (TRUST, LOGISTICA, DIAGNOSTICO, COMPARATIVO)
+           ========================================= */
+        /* Trust Bar */
+        .trust-bar { background: #003366; color: white; padding: 15px 0; border-bottom: 3px solid #FF7733; }
+        .trust-grid { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; }
+        .trust-item { flex: 1; min-width: 200px; margin: 5px 0; font-weight: 500; font-size: 0.95rem; }
+        .trust-item i { color: #FF7733; margin-right: 8px; }
+
+        /* Logistics */
+        .logistics-section { background: #fff; padding: 50px 0; }
+        .logistics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: center; }
+        .logistics-card { background: #f9f9f9; padding: 25px; border-radius: 12px; border: 1px solid #eee; transition: 0.3s; }
+        .logistics-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: #003366; }
+        .logistics-icon { font-size: 2.5rem; color: #003366; margin-bottom: 15px; }
+        .logistics-card h4 { font-weight: bold; margin-bottom: 10px; color: #333; }
+        .logistics-card p { font-size: 0.9rem; color: #666; }
+
+        /* Diagnostic */
+        .diagnostic-section { padding: 60px 0; background: #fff; }
+        .symptom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        details.symptom-box { background: #fff; border: 2px solid #eee; border-radius: 15px; overflow: hidden; transition: all 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        details.symptom-box:hover { border-color: #003366; }
+        details.symptom-box[open] { border-color: #FF7733; box-shadow: 0 10px 25px rgba(255, 119, 51, 0.15); }
+        summary.symptom-header { padding: 25px; cursor: pointer; font-weight: bold; color: #003366; font-size: 1.1rem; display: flex; align-items: center; justify-content: space-between; list-style: none; }
+        summary.symptom-header::-webkit-details-marker { display: none; }
+        summary.symptom-header::after { content: '+'; font-size: 1.8rem; color: #FF7733; transition: 0.3s; }
+        details.symptom-box[open] summary.symptom-header::after { content: '-'; transform: rotate(180deg); }
+        summary.symptom-header i { margin-right: 15px; font-size: 2rem; width: 40px; text-align: center; }
+        .icon-orange { color: #FF7733; } .icon-blue { color: #003366; } .icon-red { color: #d9534f; }
+        .diagnosis-result { padding: 0 25px 25px; background: #fff; animation: fadeIn 0.4s ease; }
+        .diagnosis-result h5 { color: #333; margin-bottom: 10px; font-weight: 800; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .btn-diagnostic { display: block; width: 100%; padding: 15px; background: #003366; color: white; text-align: center; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-diagnostic:hover { background: #FF7733; }
+
+        /* Comparison */
+        .comparison-section { padding: 60px 0; background: #1a2b4a; color: white; }
+        .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .comparison-card { padding: 40px; border-radius: 20px; }
+        .comparison-fix { background: #e6f7ff; color: #333; border: 4px solid #2196F3; }
+        .comparison-replace { background: #fff3e0; color: #333; border: 4px solid #FF9800; }
+        .comparison-card h4 { font-size: 1.6rem; margin-bottom: 25px; text-align: center; font-weight: 800; }
+        .comparison-fix h4 { color: #0056b3; } .comparison-replace h4 { color: #e65100; }
+        .comparison-card li { display: flex; margin-bottom: 15px; font-size: 1rem; }
+        .comparison-card li i { margin-right: 10px; font-size: 1.2rem; margin-top: 3px; }
+        .comparison-fix li i { color: #2196F3; } .comparison-replace li i { color: #FF9800; }
+        .result-text { text-align: center; margin-top: 20px; font-weight: bold; font-size: 1.1rem; }
+        .cta-comparison { text-align: center; margin-top: 40px; }
+        .btn-green-cta { background: #25D366; color: white; padding: 18px 40px; border-radius: 50px; font-size: 1.2rem; font-weight: bold; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s; display: inline-block; }
+        .btn-green-cta:hover { transform: scale(1.05); background: #128C7E; }
+
+        /* Tech Standard */
+        .tech-standard-section { padding: 60px 0; background: #f9f9f9; }
+        .standard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .standard-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 5px solid #FF7733; }
+        .standard-icon { font-size: 2.5rem; color: #003366; margin-bottom: 20px; }
+        .check-list-robust { list-style: none; padding: 0; }
+        .check-list-robust li { margin-bottom: 10px; display: flex; align-items: center; color: #555; }
+        .check-list-robust li i { color: #27ae60; margin-right: 10px; }
     </style>
 </head>
 <body>
@@ -344,6 +404,101 @@
                     <i class="fab fa-whatsapp"></i> Fale pelo WhatsApp
                 </a>
                 <a href="tel:+5511986826712" class="btn-primary-call animate-on-scroll" style="animation-delay: 1s;">Ligue Agora: (11) 98682-6712</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar animate-on-scroll">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item"><i class="fas fa-motorcycle"></i> <strong>Moto-Técnicos</strong> (Rápido em SBC)</div>
+                <div class="trust-item"><i class="fas fa-clock"></i> Atendimento 24h: <strong>SBC e ABC</strong></div>
+                <div class="trust-item"><i class="fas fa-star"></i> Avaliação: <strong>4.9/5.0 Estrelas</strong></div>
+                <div class="trust-item"><i class="fas fa-shield-alt"></i> Peças: <strong>Originais de Fábrica</strong></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logística SBC -->
+    <section class="logistics-section">
+        <div class="container">
+            <h3 style="text-align: center; color: #003366; font-size: 2rem; margin-bottom: 10px;">Como atendemos SBC <span style="color: #FF7733;">Tão Rápido?</span></h3>
+            <p style="text-align: center; color: #666; margin-bottom: 40px;">Logística estratégica para cobrir todos os bairros de São Bernardo.</p>
+            <div class="logistics-grid">
+                <div class="logistics-card">
+                    <i class="fas fa-map-marked-alt logistics-icon"></i>
+                    <h4>Bases Estratégicas</h4>
+                    <p>Técnicos posicionados próximos à Via Anchieta, Rudge Ramos e Centro para deslocamento ágil.</p>
+                </div>
+                <div class="logistics-card">
+                    <i class="fas fa-motorcycle logistics-icon"></i>
+                    <h4>Frota Ágil</h4>
+                    <p>Atendimentos de urgência realizados por motos equipadas com kits de reparo rápido.</p>
+                </div>
+                <div class="logistics-card">
+                    <i class="fas fa-box-open logistics-icon"></i>
+                    <h4>Estoque Volante</h4>
+                    <p>Nossos veículos carregam as principais peças (placas, ventoinhas) para consertar na primeira visita.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagnóstico Rápido -->
+    <section id="diagnostico" class="diagnostic-section">
+        <div class="container">
+            <h3 style="text-align: center; color: #003366; font-size: 2rem; margin-bottom: 10px;">Diagnóstico Rápido: <span style="color: #FF7733;">O que está acontecendo?</span></h3>
+            <p style="text-align: center; color: #666; margin-bottom: 40px;">Identifique o problema e receba uma solução imediata da nossa equipe em SBC:</p>
+
+            <div class="symptom-grid">
+                <details class="symptom-box">
+                    <summary class="symptom-header"><i class="fas fa-shower icon-orange"></i> Água não esquenta</summary>
+                    <div class="diagnosis-result">
+                        <h5>Causas Prováveis:</h5><ul><li>Piloto/Ignição falhando.</li><li>Gás cortado ou registro fechado.</li><li>Baixa pressão.</li></ul>
+                        <h5>Solução HD:</h5><p>Check-up completo. Resolvemos na hora.</p>
+                        <a href="https://wa.me/5511986826712?text=Problema:%20Água%20não%20esquenta%20SBC." class="btn-diagnostic">Solicitar Reparo</a>
+                    </div>
+                </details>
+                <details class="symptom-box">
+                    <summary class="symptom-header"><i class="fas fa-power-off icon-orange"></i> Desliga sozinho</summary>
+                    <div class="diagnosis-result">
+                        <h5>Causas Prováveis:</h5><ul><li>Sensor de superaquecimento.</li><li>Exaustão ruim (Ninhos na chaminé).</li><li>Vento apagando a chama.</li></ul>
+                        <h5>Solução HD:</h5><p>Limpeza de sensores e verificação de segurança.</p>
+                        <a href="https://wa.me/5511986826712?text=Problema:%20Desligando%20sozinho%20SBC." class="btn-diagnostic">Agendar Verificação</a>
+                    </div>
+                </details>
+                <details class="symptom-box">
+                    <summary class="symptom-header"><i class="fas fa-exclamation-circle icon-orange"></i> Código de Erro</summary>
+                    <div class="diagnosis-result">
+                        <h5>Significado:</h5><p>O aparelho detectou falha. E1/E10 (Gás), E90 (Exaustão), etc.</p>
+                        <h5>Solução HD:</h5><p>Reset e correção da placa eletrônica.</p>
+                        <a href="https://wa.me/5511986826712?text=Problema:%20Código%20de%20Erro%20SBC." class="btn-diagnostic">Informar Código</a>
+                    </div>
+                </details>
+                <details class="symptom-box" style="border-color: #ffcccc;">
+                    <summary class="symptom-header"><i class="fas fa-fire-alt icon-red"></i> Cheiro de Gás</summary>
+                    <div class="diagnosis-result" style="background: #fff0f0;">
+                        <h5 style="color: #d9534f;">PERIGO:</h5><p>Feche o registro e abra janelas. Risco de explosão ou intoxicação.</p>
+                        <a href="https://wa.me/5511986826712?text=URGENTE:%20Cheiro%20de%20Gás%20SBC." class="btn-diagnostic" style="background: #d9534f;">Emergência SBC</a>
+                    </div>
+                </details>
+                <details class="symptom-box">
+                    <summary class="symptom-header"><i class="fas fa-volume-up icon-blue"></i> Barulhos / Vibração</summary>
+                    <div class="diagnosis-result">
+                        <h5>Causas:</h5><p>Ventoinha suja ou excesso de pressão de água.</p>
+                        <h5>Solução HD:</h5><p>Lubrificação e ajuste hidráulico.</p>
+                        <a href="https://wa.me/5511986826712?text=Problema:%20Barulho%20no%20aquecedor%20SBC." class="btn-diagnostic">Solicitar Avaliação</a>
+                    </div>
+                </details>
+                <details class="symptom-box">
+                    <summary class="symptom-header"><i class="fas fa-burn icon-orange"></i> Chama Amarela</summary>
+                    <div class="diagnosis-result">
+                        <h5>Risco:</h5><p>Queima incompleta gerando fuligem e monóxido de carbono.</p>
+                        <h5>Solução HD:</h5><p>Limpeza química urgente.</p>
+                        <a href="https://wa.me/5511986826712?text=Problema:%20Chama%20amarela%20SBC." class="btn-diagnostic">Agendar Limpeza</a>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
@@ -434,6 +589,40 @@
             </form>
         </div>
     </div>
+
+    <!-- Comparativo Consertar vs Trocar -->
+    <section id="comparativo" class="comparison-section">
+        <div class="container">
+            <h3 style="text-align: center; color:white; font-size: 2rem; margin-bottom: 10px;">Dúvida: <span style="color: #FF7733;">Consertar ou Trocar?</span></h3>
+            <p style="text-align: center; color:#ccc;">Guia rápido para ajudar na sua decisão:</p>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card comparison-fix">
+                    <h4><i class="fas fa-wrench"></i> Quando CONSERTAR vale a pena</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Aparelho com menos de 8-10 anos.</li>
+                        <li><i class="fas fa-check-circle"></i> Custo do reparo < 40% de um novo.</li>
+                        <li><i class="fas fa-check-circle"></i> Peças originais acessíveis.</li>
+                    </ul>
+                    <p class="result-text" style="color: #0056b3;">Resultado: Economia imediata.</p>
+                </div>
+                <div class="comparison-card comparison-replace">
+                    <h4><i class="fas fa-sync-alt"></i> Quando TROCAR é melhor</h4>
+                    <ul>
+                        <li><i class="fas fa-times-circle"></i> Aparelho antigo (+12 anos) ou corrosão.</li>
+                        <li><i class="fas fa-times-circle"></i> Peças caras ou fora de linha.</li>
+                        <li><i class="fas fa-times-circle"></i> Deseja upgrade tecnológico (Digital).</li>
+                    </ul>
+                    <p class="result-text" style="color: #e65100;">Resultado: Eficiência e Segurança.</p>
+                </div>
+            </div>
+            <div class="cta-comparison">
+                <a href="https://wa.me/5511986826712?text=Olá%21%20Dúvida:%20Conserto%20ou%20Troco?" class="btn-green-cta">
+                    <i class="fab fa-whatsapp"></i> Avaliação Grátis em SBC
+                </a>
+            </div>
+        </div>
+    </section>
 
    <section id="vendas" class="sales-section animate-on-scroll" style="animation-delay: 0.3s;">
         <div class="container">
@@ -573,6 +762,31 @@
         </div>
     </div>
 </section>
+
+    <!-- Padrão HD (Tech Standard) -->
+    <section id="padrao-hd" class="tech-standard-section">
+        <div class="container">
+            <h3 style="text-align: center; color: #003366; font-size: 2rem; margin-bottom: 10px;">Segurança NBR 13103: <span style="color: #FF7733;">Padrão Ouro</span></h3>
+            <div class="standard-grid">
+                <div class="standard-card">
+                    <i class="fas fa-tools standard-icon"></i>
+                    <h4>1. Limpeza Técnica</h4>
+                    <ul class="check-list-robust"><li><i class="fas fa-check"></i> Queimadores e Injetores.</li><li><i class="fas fa-check"></i> Ventoinha e Permutador.</li></ul>
+                </div>
+                <div class="standard-card">
+                    <i class="fas fa-shield-virus standard-icon"></i>
+                    <h4>2. Segurança Total</h4>
+                    <ul class="check-list-robust"><li><i class="fas fa-check"></i> Teste de vazamento de gás.</li><li><i class="fas fa-check"></i> Medição de Monóxido (CO).</li></ul>
+                </div>
+                <div class="standard-card">
+                    <i class="fas fa-sliders-h standard-icon"></i>
+                    <h4>3. Performance</h4>
+                    <ul class="check-list-robust"><li><i class="fas fa-check"></i> Ajuste de pressão dinâmica.</li><li><i class="fas fa-check"></i> Regulagem de temperatura.</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="diferenciais" class="why-choose-section animate-on-scroll">
         <div class="container">
             <h3>Por que a <span class="highlight-orange">HD Aquecedores?</span></h3>
@@ -775,13 +989,13 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
     <script src="ai-agent.js"></script>
+    <script src="config.js"></script>
 
     <script>
         // Inicialização do Supabase
         const { createClient } = supabase;
-        const supabaseUrl = 'https://lhfhrrxhiirnayclvxyc.supabase.co';
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxoZmhycnhoaWlybmF5Y2x2eHljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ5NTc0NzUsImV4cCI6MjA4MDUzMzQ3NX0.gdk9mgFuojkQkzmIr4O9KzE_r8y0TMcYnyXMn9DG2n4';
-        const supabaseClient = createClient(supabaseUrl, supabaseKey);
+        // As chaves SUPABASE_URL e SUPABASE_KEY são carregadas do arquivo config.js (que é ignorado pelo Git)
+        const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
 
         // Funções do Modal de Agendamento
         function openScheduleModal() {
