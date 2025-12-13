@@ -371,6 +371,16 @@
         .check-list-robust { list-style: none; padding: 0; }
         .check-list-robust li { margin-bottom: 10px; display: flex; align-items: center; color: #555; }
         .check-list-robust li i { color: #27ae60; margin-right: 10px; }
+
+        /* Responsividade das Novas Seções (Correção Mobile) */
+        @media (max-width: 768px) {
+            .comparison-grid, .symptom-grid {
+                grid-template-columns: 1fr; /* Empilha os cards verticalmente */
+            }
+            .comparison-card {
+                padding: 25px; /* Reduz o espaçamento interno para caber melhor */
+            }
+        }
     </style>
 </head>
 <body>
