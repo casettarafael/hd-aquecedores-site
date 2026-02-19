@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Páginas Principais -->
+  <url>
+    <loc>https://hdaquecedores.com.br/</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://hdaquecedores.com.br/index.html</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://hdaquecedores.com.br/area-de-atendimento.html</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://hdaquecedores.com.br/catalogo.html</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Cidades Principais -->
+  <url>
+    <loc>https://hdaquecedores.com.br/aquecedores-sp.html</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://hdaquecedores.com.br/aquecedores-santo-andre.html</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://hdaquecedores.com.br/aquecedores-sao-caetano.html</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Bairros e Regiões -->
+  <url><loc>https://hdaquecedores.com.br/aquecedores-panamby.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-vila-leopoldina.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-granja-julieta.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/bosque-da-saude.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/ipiranga.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-moema.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-vila-mariana.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-perdizes.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-pinheiros.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-tatuape.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-santana.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-morumbi.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-brooklin.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-higienopolis.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-jardins.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-pompeia.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-aclimacao.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-campo-belo.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-analia-franco.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-bela-vista.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-saude.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-vila-madalena.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-itaim-bibi.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-vila-nova-conceicao.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-alto-da-lapa.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-pacaembu.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-paraiso.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-consolacao.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-mooca.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-belem.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-vila-olimpia.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-chacara-klabin.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-alto-de-pinheiros.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hdaquecedores.com.br/aquecedores-jardim-paulista.html</loc><priority>0.80</priority></url>
+</urlset>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hdaquecedores.com.br/sitemap.xml
